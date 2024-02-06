@@ -1,12 +1,12 @@
-# Welcome to LayoutDocs!
+# ¡Bienvenido a LayoutDocs!
 
 <!-- prettier-ignore -->
-!!! Warning
-    If you're looking for a guide on how to create a theme, this is not the right place. This guide is specifically for the process of creating custom *layouts*: the actual layout of menu components. The difference is that a layout can be used in many themes. For example, [these themes](https://themezer.net/themes/homemenu?sort=updated&order=desc&layouts=e) all use [Doge Layout](https://themezer.net/layouts/homemenu/Doge-Layout-e).
+!!! Advertencia
+    Si estás buscando una guía sobre cómo crear un tema, este no es el lugar correcto. Esta guía es específicamente para el proceso de crear *layouts* personalizados: el diseño real de los componentes del menú. La diferencia es que un diseño puede ser utilizado en muchos temas. Por ejemplo, [estos temas](https://themezer.net/themes/homemenu?sort=updated&order=desc&layouts=e) todos utilizan [Doge Layout](https://themezer.net/layouts/homemenu/Doge-Layout-e).
 
-## Contributing
+## Contribuir
 
-If you're interested in [contributing to LayoutDocs](https://github.com/ThemezerNX/LayoutDocs) you may create a Pull Request with your changes/additions.
-You may also DM `Migush#4096` on Discord.
+Si estás interesado en [contribuir a LayoutDocs](https://github.com/ThemezerNX/LayoutDocs) puedes crear una solicitud de extracción (Pull Request) con tus cambios/adiciones.
+También puedes enviar un mensaje directo a `Migush#4096` en Discord.
 
-# [Getting Started](guide/index.md) :octicons-arrow-right-16:
+# [Empezando](guide/index.md) :octicons-arrow-right-16:
