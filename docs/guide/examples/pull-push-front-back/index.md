@@ -1,24 +1,25 @@
-![Preview](preview.jpg)  
-_Pulling panes to the front in an old version of [Careful Layout](https://themezer.net/layouts/homemenu/Careful-Layout-6) by Migush_
+![Vista previa](preview.jpg)  
+_Adelantar paneles en una versión antigua de [Careful Layout](https://themezer.net/layouts/homemenu/Careful-Layout-6) por Migush_
 
 ---
 
-In the case that z-coordinates do not work, there is another way to pull panes to the front or push them to the back. This example shows how you can do that. It has to do with the order in which panes are listed in the `lyt` file. Panes are rendered from top to bottom in the hierary tree:
+En el caso de que las coordenadas z no funcionen, hay otra forma de adelantar paneles o retrocederlos. Este ejemplo muestra cómo puedes hacerlo. Tiene que ver con el orden en el que se enumeran los paneles en el archivo `lyt`. Los paneles se renderizan de arriba a abajo en el árbol jerárquico:
 
-![Hierarchy tree](hierarchy-tree.jpg)
+![Árbol jerárquico](hierarchy-tree.jpg)
 
-The two properties supported by the NXTheme Installer / Injector are:
+Las dos propiedades soportadas por el NXTheme Installer / Injector son:
 
 -   `PushBackPanes` (array)
 -   `PullFrontPanes` (array)
 
 <!-- prettier-ignore -->
-!!! Warning
-    The Switch Theme Injector does not detect changes in pane positions made using the Switch Toolbox or Layout Editor. These changes must made in the final layout json **manually**!
+!!! Advertencia
+    El Switch Theme Injector no detecta cambios en las posiciones de los paneles realizados con Switch Toolbox o Layout Editor. ¡Estos cambios deben hacerse en el json del diseño final **manualmente**!
 
-## Example Code
+## Código de Ejemplo
 
-This example pulls the `N_Tip` (the text) of the eShop button to the front as seen in the image at the top of the page.
+Este ejemplo adelanta el `N_Tip` (el texto) del botón de eShop, como se ve en la imagen en la parte superior de la página.
+
 
 ```json
 {
@@ -33,13 +34,13 @@ This example pulls the `N_Tip` (the text) of the eShop button to the front as se
 ```
 
 <!-- prettier-ignore -->
-!!! Important
-	Note the `PushBackPanes` instead of `PullFrontPanes`. This is correct, since internally "push back" means "push the pane back from the top to bottom".
+!!! Importante
+    Ten en cuenta `PushBackPanes` en lugar de `PullFrontPanes`. Esto es correcto, ya que internamente "empujar hacia atrás" significa "empujar el panel hacia atrás de arriba a abajo".
 
-### Before
+### Antes
 
 ![before.jpg](before.jpg)
 
-### After
+### Después
 
 ![After](after.jpg)
