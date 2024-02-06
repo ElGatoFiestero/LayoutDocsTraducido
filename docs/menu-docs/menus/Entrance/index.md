@@ -1,12 +1,38 @@
-**File:** `Enterance.szs`
-**Main `bflyt` file:** [`EntMain.bflyt`](EntMain.bflyt.md)
+**Archivo:** `Enterance.szs`
+**Archivo principal `bflyt`:** [`EntMain.bflyt`](EntMain.bflyt.md)
 ---
 
-## Layout Files in `Enterance.szs`
+## Archivos de diseño en `Enterance.szs`
 
 <!-- prettier-ignore -->
 !!! Info
-    These aren't all files, because either the function is unknown or the component is unimportant.
+    Estos no son todos los archivos, porque la función es desconocida o el componente no es importante.
+
+| Nombre de archivo       			   | Nombre completo hipotético 		   | Función                                                           |
+| ------------------------------------ | ------------------------------------- | ------------------------------------------------------------------ |
+| BgMask.bflyt						   | Máscara de fondo			 		   | imagen/color de máscara de fondo									|
+| EntBtnLock.bflyt		  			   | Botón de bloqueo de entrada		   | Contiene los 3 puntos de desbloqueo y texto					 		|
+| [`EntMain.bflyt`](EntMain.bflyt.md)  | Principal de entrada				   | Página principal 													|
+| EntBtnResumeSystemApplet.bflyt	   | Botón de reanudación de applet de sistema de entrada | Icono de reanudación para applets de sistema			|
+| EntBtnLockIndicator.bflyt			   | Indicador de bloqueo del botón de entrada | Contiene la información principal / aspecto temático de los 3 puntos de desbloqueo |
+| HudSignal.bflyt					   | Iconos de señal del HUD			   | Contiene los iconos de HUD para avión/wifi/ethernet 				| 
+| EntBtnResumeGame.bflyt			   | Botón de reanudación del juego de entrada | Icono de reanudación para el juego y usuario que lo suspendió		|
+| BatteryConsole.bflyt			       | Batería de la consola 			   | Iconos para la batería 											|
+| PageindicatorDotAlarm.bflyt 		   | Indicador de página punto alarma	   | 			 														|
+| PageindicatorAlarm.bflyt			   |									   | ¿Puntos de alarma?												|
+| EntBtnBack.bflyt                     | Botón de retroceso de entrada 	   | botón de retroceso e icono 										|
+| EntIcoAlarmResumeGame.bflyt          | Icono de alarma Reanudar juego entrada |					 												|
+| Hud.bflyt                            | HUD 								   | Contiene toda la información del HUD								|
+| HudBatteryNum 					   | Números de batería del HUD 		   | % de batería y números 											|
+| EntBtnNftLock.bflyt 				   | Bloqueo de notificaciones botón de entrada | iconos de noticias / películas?									|
+| EntBtnNft.bflyt 					   | Botón de notificación de entrada 	   | 																	|
+| EntBtnCenterAlarmClose.bflyt 		   | Botón de cierre de alarma central entrada | Botón de cierre de alarma 										|
+| EntBtnCenter.bflyt 				   | Botón central de entrada 			   | Botón 															|
+| GTNumM.bflyt 						   | Número de tiempo grande 			   | Texto/número en el HUD											|
+| GTNumL.bflyt 						   | Número de tiempo mediano 			   | Texto/número en el HUD 											|
+| EntBtnChildLock.bflyt 			   | Bloqueo infantil botón de entrada	   | Botón de bloqueo infantil con iconos								|
+
+Tabla en inglés para desambiguación
 
 | Filename       					   | Hypothetical full name 			   | Function                                                           |
 | ------------------------------------ | ------------------------------------- | ------------------------------------------------------------------ |
