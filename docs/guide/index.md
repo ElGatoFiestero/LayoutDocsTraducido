@@ -1,70 +1,71 @@
-# Getting Started
+# Iniciar
 
-For this guide it is expected that you already have basic knowledge on how to install themes. If you don't, it is recommended to read [this page](https://nh-server.github.io/switch-guide/extras/theming/) to at least get a basic idea of what you're getting yourself into ;P
+Para esta guía, se espera que ya tengas conocimientos básicos sobre cómo instalar temas. Si no los tienes, se recomienda leer [esta página](https://nh-server.github.io/switch-guide/extras/theming/) para tener una idea básica de lo que estás a punto de hacer ;P
 
-### What You'll Need
+### Lo que necesitarás
 
--   A hacked Switch, connected over LAN or WiFi (use, for example, [90dns](https://gbatemp.net/threads/90dns-dns-server-for-blocking-all-nintendo-servers.516234/) to block connections to Nintendo)
--   A Windows computer
--   [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) version ≥2.6.2
-    -   You probably already have this.
-    -   You only need the `NXThemesInstaller.nro`.
-    -   You can also install this homebrew app from the HB App Store.
--   [LayoutKit](https://github.com/ThemezerNX/LayoutKit/releases/latest)
-    -   LayoutKit requires a Windows installation. While this guide might be built around LayoutKit, everything should be doable without it.
--   [sys-ftpd with reboot support](https://github.com/ThemezerNX/sys-ftpd-light-reboot/releases/latest)
+- Switch hackeada, conectada por LAN o WiFi (usa, por ejemplo, [90dns](https://gbatemp.net/threads/90dns-dns-server-for-blocking-all-nintendo-servers.516234/) para bloquear conexiones a Nintendo).
+- Una computadora con Windows.
+- [NXThemes Installer](https://github.com/exelix11/SwitchThemeInjector/releases/latest) versión ≥2.6.2
+    - Probablemente ya lo tengas.
+    - Solo necesitas el archivo `NXThemesInstaller.nro`.
+    - También puedes instalar esta aplicación homebrew desde la HB App Store.
+- [LayoutKit](https://github.com/ThemezerNX/LayoutKit/releases/latest)
+    - LayoutKit requiere una instalación de Windows. Aunque esta guía puede centrarse en LayoutKit, todo debería ser factible sin él.
+- [sys-ftpd con soporte de reinicio](https://github.com/ThemezerNX/sys-ftpd-light-reboot/releases/latest)
 
 <!-- prettier-ignore -->
-!!! Info
-    LayoutKit comes packed with the most-used tools. If you are unable to or don't want to use LayoutKit, see [this list of tools](../extras/tools.md), which includes the ones used by LayoutKit.
+!!! Información
+    LayoutKit viene con las herramientas más utilizadas. Si no puedes o no quieres usar LayoutKit, consulta [esta lista de herramientas](../extras/tools.md), que incluye las utilizadas por LayoutKit.
 
-## Initial Setup
+## Configuración Inicial
 
-1. Download and install LayoutKit.
-2. Install the NXThemes Installer.
-3. Make sure the NXThemes Installer is working and you're running version ≥2.6.2.
-4. Open the NXThemes Installer and follow the instructions if this is the first time you open it.
-5. Go to the 'Extract home menu' tab and click 'Extract home menu'.
-6. Copy the `SD://themes/systemData` folder to your computer.
-7. Copy the contents of the sys-ftpd archive to the root of your MicroSD.
-    - It is recommended that you change sys-ftpd's password. Do this by editing `SD://config/sys-ftpd/config.ini`. Remember the value you set.
+1. Descarga e instala LayoutKit.
+2. Instala NXThemes Installer.
+3. Asegúrate de que NXThemes Installer funcione y estás ejecutando la versión ≥2.6.2.
+4. Abre NXThemes Installer y sigue las instrucciones si es la primera vez que lo abres.
+5. Ve a la pestaña 'Extract home menu' y haz clic en 'Extract home menu'.
+6. Copia la carpeta `SD://themes/systemData` a tu computadora.
+7. Copia el contenido del archivo comprimido de sys-ftpd a la raíz de tu MicroSD.
+    - Se recomienda cambiar la contraseña de sys-ftpd. Hazlo editando `SD://config/sys-ftpd/config.ini`. Recuerda el valor que establezcas.
 
-## Configuring LayoutKit
+## Configuración de LayoutKit
 
-1. Read the 'Info' tab to get familiar with LayoutKit's features.
-2. Go to the 'Settings' tab and fill in your Switch's IP address. You can find it by going to `System Settings > Internet` under 'Connection status'.
-3. Configure the password if you changed it from the default (`nxthemer`). Changes are saved automatically.
-    - The loader in the top right of the application should now stop spinning and turn green. If it does not, check your FTP details.
-4. Go to the 'Firmwares' tab and click 'Import'. CLick the box that says 'ver.cfg path' and navigate to the `ver.cfg` in the `systemData` folder you copied earlier.
-    - The version should automatically be configured.
-    - If you already have this version imported, there is no need to do so again. LayoutKit will make sure the stock files stay unmodified (except if you manually start editing the application data ofcourse).
-5. Click 'Import'.
-6. Go to the 'Projects' tab and modify the settings on the 'Quick Settings' card to your likings. You can see that there also is a button to manually restart the console when it is connected. The install
-7. On the 'Project Browser' tab click 'New' and fill in the fields. Select the menus you want to include in your environment (you can change this later). The new project is automatically selected.
-8. You can apply an existing layout to any of the menus by clicking 'Apply JSON'. This will overwrite the file.
+1. Lee la pestaña 'Info' para familiarizarte con las características de LayoutKit.
+2. Ve a la pestaña 'Settings' y completa la dirección IP de tu Switch. Puedes encontrarla yendo a `Configuración del sistema > Internet` bajo 'Estado de conexión'.
+3. Configura la contraseña si la cambiaste de la predeterminada (`nxthemer`). Los cambios se guardan automáticamente.
+    - El indicador en la esquina superior derecha de la aplicación debería dejar de girar y ponerse verde. Si no lo hace, verifica los detalles de tu FTP.
+4. Ve a la pestaña 'Firmwares' y haz clic en 'Importar'. Haz clic en la casilla que dice 'ver.cfg path' y navega hasta el `ver.cfg` en la carpeta `systemData` que copiaste anteriormente.
+    - La versión debería configurarse automáticamente.
+    - Si ya tienes importada esta versión, no es necesario hacerlo de nuevo. LayoutKit se asegurará de que los archivos originales permanezcan sin modificar (excepto si comienzas a editar manualmente los datos de la aplicación, por supuesto).
+5. Haz clic en 'Importar'.
+6. Ve a la pestaña 'Projects' y modifica la configuración en la tarjeta 'Configuración rápida' a tu gusto. Puedes ver que también hay un botón para reiniciar manualmente la consola cuando está conectada. La instalación
+7. En la pestaña 'Project Browser', haz clic en 'Nuevo' y completa los campos. Selecciona los menús que deseas incluir en tu entorno (puedes cambiar esto más tarde). El nuevo proyecto se selecciona automáticamente.
+8. Puedes aplicar un diseño existente a cualquiera de los menús haciendo clic en 'Apply JSON'. Esto sobrescribirá el archivo.
 
     <!-- prettier-ignore  -->
-    !!! Important
-        You will always have to re-open Switch-Toolbox (see next step) after having applied a layout.
+    !!! Importante
+        Siempre tendrás que volver a abrir Switch-Toolbox (ver próximo paso) después de haber aplicado un diseño.
 
-9. Click any of the blue buttons with a wrench icon. This will open the Switch-Toolbox, in which you can make modifications to the menus.
-    1. Go to `Settings > Main Settings > Editor`, check `Always compress on save`, and click 'Save'. This will decrease the amount of clicks required when saving a file.
-    2. If you now double-click any of the `bflyt` or `bflan` files in the respective `blyt` and `anim` folders, Switch-Toolbox will open a second window.
-    3. After you made changes, go to `File > Save Layout` in the second window.
-    4. When you're done making changes to the `bflyt` or `bflan` files, go to `File > Save` in the first window.
-    5. The file on the disk is now updated.
-10. LayoutKit will detect changes made to the files of the current active project, meaning that after you saved an `szs` the 'Install' button on the 'Quick Settings' card will light up.
-    - If you enabled 'Install on Change', the button show a loading animation automatically and become greyed out again.
-11. You can export all changes that were made as a layout by clicking 'Save JSON'. Make sure you edit it afterwards and set the your name as author!
+9. Haz clic en cualquiera de los botones azules con un icono de llave inglesa. Esto abrirá Switch-Toolbox, en el que puedes hacer modificaciones en los menús.
+    1. Ve a `Settings > Main Settings > Editor`, marca `Always compress on save` y haz clic en 'Guardar'. Esto reducirá la cantidad de clics necesarios al guardar un archivo.
+    2. Si ahora haces doble clic en cualquiera de los archivos `bflyt` o `bflan` en las carpetas respectivas `blyt` y `anim`, Switch-Toolbox abrirá una segunda ventana.
+    3. Después de realizar cambios, ve a `File > Save Layout` en la segunda ventana.
+    4. Cuando hayas terminado de hacer cambios en los archivos `bflyt` o `bflan`, ve a `File > Save` en la primera ventana.
+    5. El archivo en el disco ahora está actualizado.
+10. LayoutKit detectará los cambios realizados en los archivos del proyecto activo actual, lo que significa que después de guardar un `szs`, el botón 'Install' en la tarjeta 'Configuración rápida' se iluminará.
+    - Si habilitaste 'Instalar al cambiar', el botón mostrará automáticamente una animación de carga y se volverá a desactivar.
 
-### Optional Steps
+11. Puedes exportar todos los cambios realizados como un diseño haciendo clic en 'Save JSON'. Asegúrate de editarlo después y establecer tu nombre como autor.
 
--   If you did not include all menus when creating the project you can click the green pencil button next to 'Copy' and select more.
--   You can copy a project if you want to test something and not mess up your original. You can do so by clicking 'Copy'.
--   You can delete firmwares, projects, or project menus by clicking the red delete button.
+### Pasos opcionales
+
+- Si no incluiste todos los menús al crear el proyecto, puedes hacer clic en el lápiz verde junto a 'Copy' y seleccionar más.
+- Puedes copiar un proyecto si quieres probar algo y no estropear el original. Puedes hacerlo haciendo clic en 'Copy'.
+- Puedes eliminar firmwares, proyectos o menús de proyectos haciendo clic en el botón rojo de eliminar.
 
 <!-- prettier-ignore -->
-!!! Tip
-    Any item that is deleted will be moved to the trash, so if you were to accidentally delete something you're in luck! Restoring the files from your trash and clicking the refresh button is enough.
+!!! Consejo
+    Cualquier elemento eliminado se moverá a la papelera, así que si accidentalmente borras algo, ¡estás de suerte! Restaurar los archivos desde la papelera y hacer clic en el botón de actualización es suficiente.
 
-# [Continue to Menu Files](menu-files.md) :octicons-arrow-right-16:
+# [Continuar a Archivos de Menú](menu-files.md) :octicons-arrow-right-16:
