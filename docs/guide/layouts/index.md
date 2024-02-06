@@ -1,20 +1,18 @@
-##### :octicons-arrow-left-16: [Back to Filetypes](../filetypes.md)
+##### :octicons-arrow-left-16: [Volver a Tipos de Archivos](../filetypes.md)
 
-# Getting Started
+# Empezando
 
-It is recommend to make a mockup first, so you know at what position you want all elements to be! Starting without one
-often results in messy layouts!
+Se recomienda hacer primero un boceto, ¡así sabrás en qué posición quieres que estén todos los elementos! Comenzar sin uno a menudo resulta en diseños desordenados.
 
-## Figuring Out the Coordinates
+## Descubriendo las Coordenadas
 
-Even though the Switch Toolbox can visualise many things, you'll never be able to see the exact final result. It is
-recommended to always start with a mockup in your favorite image editor (e.g. Photoshop or Paint.net).
+Aunque Switch Toolbox puede visualizar muchas cosas, nunca podrás ver el resultado final exacto. Se recomienda comenzar siempre con un boceto en tu editor de imágenes favorito (por ejemplo, Photoshop o Paint.net).
 
 ---
 
-## Supported properties
+## Propiedades Soportadas
 
-_Supported by the Switch Theme Injector_
+_Soportadas por el Switch Theme Injector_
 
 - `Position`
 - `Rotation`
@@ -27,24 +25,24 @@ _Supported by the Switch Theme Injector_
 - `ParentOriginY`
 - [`PushBackPanes` / `PullFrontPanes`](../examples/pull-push-front-back/index.md)
 
-_Only for picture panes (`pic1`) and text panes (`txt1`):_
+_Solo para paneles de imagen (`pic1`) y paneles de texto (`txt1`):_
 
-- `ColorTL`: Top left color
-- `ColorTR`: Top right color
-- `ColorBL`: Bottom left color
-- `ColorBR`: Bottom right color
+- `ColorTL`: Color superior izquierdo
+- `ColorTR`: Color superior derecho
+- `ColorBL`: Color inferior izquierdo
+- `ColorBR`: Color inferior derecho
 
-_Only for material panes (`mat1`):_
+_Solo para paneles de material (`mat1`):_
 
 - `ForegroundColor`
 - `BackgroundColor`
 
-# Other Guides
+# Otras Guías
 
-Check out these guides for more info on how to create layouts:
+Consulta estas guías para obtener más información sobre cómo crear diseños:
 
-- [Making your own custom layouts using SwitchLayoutEditor](https://github.com/FuryBaguette/SwitchLayoutEditor/wiki) (this is not the same as modifying JSON layouts!)
+- [Haciendo tus propios diseños personalizados con SwitchLayoutEditor](https://github.com/FuryBaguette/SwitchLayoutEditor/wiki) (¡esto no es lo mismo que modificar diseños JSON!)
 - [Rainbow Simple Homescreen with Rounded Icons and Album Icon Tutorial](https://www.reddit.com/r/NXThemes/comments/ba5o8i/rainbow_simple_homescreen_with_rounded_icons_and/)
-- [BFLYT Editing With Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/wiki/BFLYT-Editing)
+- [Edición de BFLYT con Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/wiki/BFLYT-Editing)
 
-# [Continue to USD Sections](usd-sections.md) :octicons-arrow-right-16:
+# [Continuar a Secciones USD](usd-sections.md) :octicons-arrow-right-16:
