@@ -1,41 +1,41 @@
-# Definitions
+# Definiciones
 
-This page tries to explain as much of the theming jargon as possible.
+Esta página intenta explicar tanto como sea posible el argot relacionado con la creación de temas.
 
-## Word List
+## Lista de Palabras
 
 ### SZS
 
-An archive. In the Switch's menu files it contains the layout files, animations and textures. [_More Info_](guide/filetypes.md#szs-files)
+Un archivo comprimido. En los archivos de menú de Switch, contiene los archivos de diseño, animaciones y texturas. [_Más información_](guide/filetypes.md#szs-files)
 
 ### Applet
 
-A kind of title/app/game. `Qlaunch`, `playerSelect`, `photoViewer` are all applets. [_More Info_](guide/menu-files.md#menu-files)
+Un tipo de título/aplicación/juego. `Qlaunch`, `playerSelect`, `photoViewer` son todos applets. [_Más información_](guide/menu-files.md#menu-files)
 
-### Applet Button
+### Botón de Applet
 
-An 'applet button' is a bit different from 'applet'. The album, settings, controller, etc. buttons on the Home Menu are all applet buttons.
+Un 'botón de applet' es un poco diferente de un 'applet'. Los botones de álbum, configuración, controlador, etc., en el menú de inicio son todos botones de applet.
 
 ### nxtheme
 
-Unfortunately `SZS` files from the Switch's firmware files contain copyrighted data and can't be shared online. In order to still share custom themes, the `nxtheme` format was developed. An `nxtheme` file contains theme details (name, author), images and the layout.
+Desafortunadamente, los archivos `SZS` de los archivos de firmware de Switch contienen datos con derechos de autor y no se pueden compartir en línea. Con el fin de seguir compartiendo temas personalizados, se desarrolló el formato `nxtheme`. Un archivo `nxtheme` contiene detalles del tema (nombre, autor), imágenes y el diseño.
 
 ### exelixbg
 
-The `exelixbg` is the name of the panel that is created when the NXThemes Installer or Switch Theme Injector apply a background image.
+El `exelixbg` es el nombre del panel que se crea cuando NXThemes Installer o Switch Theme Injector aplican una imagen de fondo.
 
-### Diffing, Diffed JSON, Layout JSON
+### Diffing, JSON diferenciado, JSON de diseño
 
-A layout is created by comparing a modified `SZS` file with the original unmodified one. The changes that are detected are saved in a layout `json` file, which then only contains differential data. This way, sharing `nxthemes` is completely legal.
+Un diseño se crea comparando un archivo `SZS` modificado con el original sin modificar. Los cambios detectados se guardan en un archivo de diseño `json`, que luego solo contiene datos diferenciales. De esta manera, compartir `nxthemes` es completamente legal.
 
-### Panes
+### Paneles
 
-Another term for elements in `bflyt` files. For example `P_Pict`, `N_Button`.
+Otro término para elementos en archivos `bflyt`. Por ejemplo, `P_Pict`, `N_Button`.
 
-### usd section
+### Sección usd
 
-`usd` (officially called 'extended user information') is a part of the `bflyt` file that holds extra data and defines, for example, shadows, radius, etc. Panes are often followed by `usd` sections. [_More Info_](guide/layouts/usd-sections.md)
+`usd` (oficialmente llamada 'información de usuario extendida') es una parte del archivo `bflyt` que contiene datos adicionales y define, por ejemplo, sombras, radio, etc. A menudo, los paneles van seguidos de secciones `usd`. [_Más información_](guide/layouts/usd-sections.md)
 
-### Sysupdate
+### Actualización del sistema
 
-Short for system update
+Abreviatura de actualización del sistema
