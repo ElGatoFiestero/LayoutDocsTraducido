@@ -1,17 +1,15 @@
-##### :octicons-arrow-left-16: [Back to Menu Files](menu-files.md)
+# Tipos de Archivos
 
-# Filetypes
+Esta página contiene una lista de todos los tipos de archivos relacionados con diseños personalizados y temas.
 
-This page contains a list of all filetypes related to custom layouts and theming.
+## Archivos SZS
 
-## SZS Files
+Los archivos `SZS` son archivos comprimidos con un algoritmo de compresión personalizado.
+En realidad, son archivos `SARC` (también conocidos como `ARC`). El algoritmo de compresión que se utiliza es Yaz0.
 
-`SZS` files are archives with a custom compression algorithm.
-They are actually `SARC` (aka `ARC`) files. The compression algorithm that is used is Yaz0.
+### Estructura
 
-### Structure
-
-The structure of a menu `SZS` file is generally the same:
+La estructura de un archivo `SZS` de menú suele ser la misma:
 
 ```
 📦ResidentMenu_11.0.1_original
@@ -26,31 +24,32 @@ The structure of a menu `SZS` file is generally the same:
   ┗ 📜__Combined.bntx
 ```
 
-The folders contain the following:
 
-- `anim`: Animation files (`.bflan`)
-- `bgsh`: GPU shaders (`.bnsh`, `.bushvt`)
-- `blyt`: Layout files (`.bflyt`)
-- `timg`: Menu images (`.bntx`)
+Las carpetas contienen lo siguiente:
 
-For custom layouts we only touch the files in `anim` and `blyt`. However, it is interesting to note that the NXTheme
-Installer internally injects the [nxtheme](../definitions.md#nxtheme) background image in the `__Combined.bntx` file.
+- `anim`: Archivos de animación (`.bflan`)
+- `bgsh`: Shaders de GPU (`.bnsh`, `.bushvt`)
+- `blyt`: Archivos de diseño (`.bflyt`)
+- `timg`: Imágenes del menú (`.bntx`)
 
-### Filetypes
+Para diseños personalizados, solo tocamos los archivos en `anim` y `blyt`. Sin embargo, es interesante tener en cuenta que el instalador NXTheme internamente inyecta la imagen de fondo [nxtheme](../definitions.md#nxtheme) en el archivo `__Combined.bntx`.
 
-Nintendo has been using its own formats to design menus, animations and shaders, often stored in these (s)arc archives.
-Heres a table of some formats that have emerged throughout the years:
+### Tipos de Archivos
 
-| Console                                           | Format    | Description                                          | Extra Docs and Resources                                                                                                                                                                                                                 |
+Nintendo ha estado utilizando sus propios formatos para diseñar menús, animaciones y sombreadores, a menudo almacenados en estos archivos de archivos (s)arc.
+Aquí hay una tabla de algunos formatos que han surgido a lo largo de los años:
+
+| Consola                                           | Formato    | Descripción                                          | Documentos y Recursos Adicionales                                                                                                                                                                                                                 |
 |---------------------------------------------------|-----------|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Wii (Rev/**R**evolution)                          | `(b)rlyt` | (**B**inary) **R**evolution **L**a**Y**ou**T**       |                                                                                                                                                                                                                                          |
 |                                                   | `(b)rlan` | (**B**inary) **R**evolution **L**ayout **AN**imation |                                                                                                                                                                                                                                          |
 | DS (NTR/Nitro)                                    | -         | -                                                    |                                                                                                                                                                                                                                          |
 | 3DS (**C**TR)                                     | `(b)clyt` | (**B**inary) **C**TR **L**a**Y**ou**T**              |                                                                                                                                                                                                                                          |
 |                                                   | `(b)clan` | (**B**inary) **C**TR **L**ayout **AN**imation        |                                                                                                                                                                                                                                          |
-| Wii U (**C**afe), but also used by 3DS and Switch | `(b)flyt` | (**B**inary) ca**F**e **L**a**Y**ou**T**             | [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/blob/c9e74e0be114885f347789f3bd348baccacf0842/File_Format_Library/FileFormats/Layout/CAFE/BFLYT.cs), [3DSkit](https://github.com/Tyulis/3DSkit/blob/master/doc/BFLYT.md) |
+| Wii U (**C**afe), pero también utilizado por 3DS y Switch | `(b)flyt` | (**B**inary) ca**F**e **L**a**Y**ou**T**             | [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/blob/c9e74e0be114885f347789f3bd348baccacf0842/File_Format_Library/FileFormats/Layout/CAFE/BFLYT.cs), [3DSkit](https://github.com/Tyulis/3DSkit/blob/master/doc/BFLYT.md) |
 |                                                   | `(b)flan` | (**B**inary) ca**F**e **L**ayout **AN**imation       | [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/blob/c9e74e0be114885f347789f3bd348baccacf0842/File_Format_Library/FileFormats/Layout/CAFE/BFLAN.cs), [3DSkit](https://github.com/Tyulis/3DSkit/blob/master/doc/BFLAN.md) |
 | Switch (NX)                                       | `(b)ntx`  | (**B**inary) **N**x **T**e**X**ture                  | [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/blob/c9e74e0be114885f347789f3bd348baccacf0842/File_Format_Library/FileFormats/Texture/BNTX.cs), [3DSkit](https://github.com/Tyulis/3DSkit/blob/master/doc/BNTX.md)       |
+
 
 (If you're interested in more Nintendo device codenames, check
 out [this page](https://salty-salty-studios.com/shiz/misc/codenames.html))
