@@ -1,26 +1,26 @@
-# Custom Messages/Text/Translations
+# Mensajes personalizados/Texto/Traducciones
 
-It's possible to edit any text shown in a menu by editing the strings file
+Es posible editar cualquier texto mostrado en un menú editando el archivo de cadenas de texto.
 
-## Info
+## Información
 
-The messages strings are stored in `0100000000001000\romfs\message\<lang code>\<menu>.msbt.szs`
+Los mensajes de texto se almacenan en `0100000000001000\romfs\message\<lang code>\<menu>.msbt.szs`
 
-## What You'll Need
+## Lo que necesitarás
 
--   qlaunch romfs files (extract firmare, extract qlaunch)
--   [Kuriimu v1](https://github.com/IcySon55/Kuriimu/releases)
+- Archivos romfs de qlaunch (extraer firmware, extraer qlaunch)
+- [Kuriimu v1](https://github.com/IcySon55/Kuriimu/releases)
 
-## Example steps to change the eShop button label
+## Ejemplo de pasos para cambiar la etiqueta del botón eShop
 
-1. Copy the `qlaunch.msbt.szs` of the language you want to edit from the qlaunch romfs (see path above)
-2. Open Kuriimu and follow this path: ![image](https://cdn.discordapp.com/attachments/495784470377398282/495850689394638848/unknown1.png)
-3. Pick `qlaunch.msbt.szs`
-4. It will ask you where to decompress it. It will retain the "szs" in the end, but it will say decomp.szs so its unpackaged
-5. Now open up the `qlaunch.msbt.decomp.szs` in Kuriimu and it should look like this screenshot (with a list of string names on the left) ![image](https://cdn.discordapp.com/attachments/495784470377398282/495850914872295424/unknown.png)
-6. To change the eShop button label, go down to the ones labeled `RdtSystemTitle_Shop`
-7. Change it to whatever, save it. Then repeat the "Decompress" steps but instead compress this time
-8. Rename the compressed `.szs` to `qlaunch.msbt.szs`
-9. Copy the modified `qlaunch.msbt.szs` to `SD:\atmosphere\contents\0100000000001000\romfs\message\<lang code>\qlaunch.msbt.szs`
+1. Copia el archivo `qlaunch.msbt.szs` del idioma que deseas editar desde el romfs de qlaunch (ver ruta arriba)
+2. Abre Kuriimu y sigue esta ruta: ![image](https://cdn.discordapp.com/attachments/495784470377398282/495850689394638848/unknown1.png)
+3. Selecciona `qlaunch.msbt.szs`
+4. Te preguntará dónde descomprimirlo. Mantendrá el "szs" al final, pero dirá decomp.szs, así que estará desempaquetado
+5. Ahora abre el `qlaunch.msbt.decomp.szs` en Kuriimu y debería verse como esta captura de pantalla (con una lista de nombres de cadenas de texto a la izquierda) ![image](https://cdn.discordapp.com/attachments/495784470377398282/495850914872295424/unknown.png)
+6. Para cambiar la etiqueta del botón eShop, ve hacia abajo a los que están etiquetados como `RdtSystemTitle_Shop`
+7. Cambia a lo que quieras, guárdalo. Luego repite los pasos de "Descomprimir" pero comprime esta vez
+8. Renombra el archivo comprimido `.szs` a `qlaunch.msbt.szs`
+9. Copia el `qlaunch.msbt.szs` modificado a `SD:\atmosphere\contents\0100000000001000\romfs\message\<lang code>\qlaunch.msbt.szs`
 
-For a more extensive guide (although not yet finished) [check out this one](https://github.com/bandithedoge/switch-pl/wiki) by bandithedoge
+Para una guía más extensa (aunque aún no está terminada) [echa un vistazo a esta](https://github.com/bandithedoge/switch-pl/wiki) por bandithedoge
