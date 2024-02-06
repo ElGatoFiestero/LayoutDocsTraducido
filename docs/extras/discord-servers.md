@@ -1,7 +1,7 @@
-# Discord Servers
+# Servidores de Discord
 
-This is a list of Switch-related Discord servers.
+Esta es una lista de servidores de Discord relacionados con Nintendo Switch.
 
-## Servers
+## Servidores
 
 -   [ThemezerNX](http://discord.gg/nnm8wyM)
