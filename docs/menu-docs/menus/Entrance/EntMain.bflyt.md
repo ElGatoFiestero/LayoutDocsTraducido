@@ -2,16 +2,16 @@
 
 #EntMain.bflyt (Main bflyt)
 
-**File:** `Enterance.szs/blyt/EntMain.bflyt`<br>
-**This is the Main `bflyt` file**
+**ARchivo:** `Enterance.szs/blyt/EntMain.bflyt`<br>
+**Este es el archivo `bflyt` principal**
 
 ---
 
-## Layout of `Enterance.szs/blyt/EntMain.bflyt `
+## Layout de `Enterance.szs/blyt/EntMain.bflyt `
 
 <!-- prettier-ignore -->
 
-## Tree
+## ÁRbol
 
 -	**RootPane [pan1]**
 	-	**P_BgL [pic 1]** `left background`
