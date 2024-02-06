@@ -79,18 +79,18 @@ El sistema tiene valores especiales que pueden ser utilizados en todo el sistema
 
 <div class="color-table" markdown="1">
 
-| Value | Light theme                   | Dark theme    | Usage                                                                                   |
+| Valor | Tema Claro                 | Tema Oscuro    | Uso                                                                                   |
 | ----- | ----------------------------- | ------------- | --------------------------------------------------------------------------------------- |
-| 0     | -                             | -             | default (off)                                                                           |
+| 0     | -                             | -             | default (apagado)                                                                           |
 | 1     | white (255,255,255)           | (29,32,37)    |                                                                                         |
 | 2     | black (0,0,0)                 | (0,0,0)       |                                                                                         |
 | 3     | green (114,201,0)             | (149,231,0)   | Charge indicator                                                                        |
 | 4     | white (255,255,255)           | (255,255,255) |                                                                                         |
-| 5     | white (235,235,235)           | (45,45,45)    | Light/dark theme bg                                                                     |
+| 5     | white (235,235,235)           | (45,45,45)    | Fondo de tema claro/oscuro                                                                    |
 | 6     | white (255,255,255)           | (67,67,67)    |                                                                                         |
 | 7     | white (255,255,255)           | (98,99,103)   |                                                                                         |
 | 8     | white (255,255,255)           | (31,32,34)    |                                                                                         |
-| 9     | dark grey (45,45,45)          | (255,255,255) | Controller indicator and text color                                                     |
+| 9     | dark grey (45,45,45)          | (255,255,255) | Indicador de controlador y color de texto                                                 |
 | 10    | blue (50,80,240)              | (0,255,201)   |                                                                                         |
 | 11    | white (255,255,255)           | (31,32,34)    |                                                                                         |
 | 12    | grey (128,128,128)            | (160,160,160) |                                                                                         |
@@ -99,7 +99,7 @@ El sistema tiene valores especiales que pueden ser utilizados en todo el sistema
 | 15    | white (255,255,255)           | (70,70,70)    |                                                                                         |
 | 16    | green (114,201,0)             | (149,231,0)   |                                                                                         |
 | 17    | green (114,201,0)             | (200,255,0)   |                                                                                         |
-| 18    | blue (50,80,240)              | (0,255,201)   | Pill and text color of navigation (the list on the left) in e.g. settings when selected |
+| 18    | blue (50,80,240)              | (0,255,201)   | olor de pastilla y texto de navegación (la lista a la izquierda) en, por ejemplo, ajustes cuando se selecciona |
 | 19    | light blue (110,191,225)      | (0,151,130)   |                                                                                         |
 | 20    | white (255,255,255)           | (45,45,45)    |                                                                                         |
 | 21    | grey/blue (129,140,160)       | (160,180,179) |                                                                                         |
@@ -112,7 +112,7 @@ El sistema tiene valores especiales que pueden ser utilizados en todo el sistema
 | 28    | grey (128,128,128)            | (200,200,200) |                                                                                         |
 | 29    | neon blue (192,119,193)       | (25,214,210)  | Cursor                                                                                  |
 | 30    | light neon blue (112,255,231) | (131,250,255) |                                                                                         |
-| 31    | white (255,255,255)           | (80,80,80)    | System Applets circle background                                                        |
+| 31    | white (255,255,255)           | (80,80,80)    | Fondo circular del System Applets                                                         |
 | 32    | magenta (255,0,255)           | (255,0,255)   |                                                                                         |
 | 33    | green/blue (87,255,219)       | (157,255,251) |                                                                                         |
 | 34    | grey (110,120,121)            | (220,220,220) |                                                                                         |
@@ -122,11 +122,11 @@ El sistema tiene valores especiales que pueden ser utilizados en todo el sistema
 | 38    | blue (18,189,207)             | (2,136,199)   | Cursor                                                                                  |
 | 39    | dark blue (15,89,114)         | (24,51,70)    |                                                                                         |
 | 40    | light blue (29,241,255)       | (0,220,225)   |                                                                                         |
-| 41    | light blue (29,241,255)       | (0,220,255)   | Blue highlight touch                                                                    |
-| 42    | light blue (0,190,200)        | (24,189,255)  | Game text                                                                               |
+| 41    | light blue (29,241,255)       | (0,220,255)   | Resaltado azul al tocar                                                                   |
+| 42    | light blue (0,190,200)        | (24,189,255)  | Texto del juego                                                                               |
 | 43    | blue-ish (0,190,200)          | (24,189,255)  |                                                                                         |
 | 44    | white (240,240,240)           | (70,70,70)    |                                                                                         |
-| 45    | grey (255,255,255)            | (119,119,119) | Player select plate background                                                          |
+| 45    | grey (255,255,255)            | (119,119,119) | Fondo circular de la selección del jugador                                                      |
 | 46    | magenta (255,0,255)           | (255,0,255)   |                                                                                         |
 | 47    | white (255,255,255)           | (90,90,90)    |                                                                                         |
 | 48    | dark blue (16,13,68)          | (0,0,0)       |                                                                                         |
@@ -139,11 +139,11 @@ El sistema tiene valores especiales que pueden ser utilizados en todo el sistema
 | 55    | green (0,200,0)               | (180,255,0)   |                                                                                         |
 | 56    | green (140,240,28)            | (101,170,0)   |                                                                                         |
 | 57    | green (0,170,0)               | (180,255,0)   |                                                                                         |
-| 58    | dark grey (45,45,45)          | (255,255,255) | Lockscreen home icon                                                                    |
+| 58    | dark grey (45,45,45)          | (255,255,255) | Icono de inicio de la pantalla de bloqueo                                                                   |
 | 59    | white (255,255,255)           | (45,45,45)    |                                                                                         |
 | 60    | grey (200,200,200)            | (120,120,120) |                                                                                         |
 | 61    | magenta (255,0,255)           | (255,0,255)   |                                                                                         |
-| 62    | dark grey (45,45,45)          | (83,87,86)    | Lockscreen three dots when unlocking                                                    |
+| 62    | dark grey (45,45,45)          | (83,87,86)    | Tres puntos de la pantalla de bloqueo al desbloquear                                                 |
 | 63    | white (255,255,255)           | (29,32,37)    |                                                                                         |
 | 64    | dark blue (19,29,90)          | (0,0,0)       |                                                                                         |
 | 65    | green/blue (0,91,186)         | (46,161,205)  | Cursor                                                                                  |
@@ -282,13 +282,13 @@ Formato: `[X]`
 }
 ```
 
-##### Values
+##### Valores
 
 <div class="color-table" markdown="1">
 
 | Value | Light theme                | Comments                                      |               |
 | ----- | -------------------------- | --------------------------------------------- | ------------- |
-| 0     | -                          | -                                             | default (off) |
+| 0     | -                          | -                                             | default (apagado) |
 | 1     | white                      |                                               |               |
 | 2     | white                      |                                               |               |
 | 3     | white                      |                                               |               |
@@ -323,7 +323,7 @@ _Functionality unknown_
 Type: `1`  
 Format: `[X]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -333,9 +333,9 @@ Format: `[X]`
 }
 ```
 
-##### Tested Values
+##### Valores testeados
 
-| Value | Comment |
+| Valor | Comentario |
 | ----- | ------- |
 | 0     | nothing |
 | 1     | nothing |
@@ -343,18 +343,18 @@ Format: `[X]`
 
 ---
 
-### Border
+### Borde
 
 #### **`S_RoundRadius`**
 
-Changes the border radius of picture panels.
-Percentage/pixels?
+Cambia el radio del borde de los paneles de imagen.
+¿Porcentaje/píxeles?
 
-Type: `2`  
-Format: `[X]`
-Pane types: Picture only
+Tipo: `2`  
+Formato: `[X]`
+Tipos de paneles: Solo imágenes
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -375,7 +375,7 @@ Format: `[X]`
 Common value: `1`  
 Example usage: `Cursor3`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -385,24 +385,24 @@ Example usage: `Cursor3`
 }
 ```
 
-##### Values
+##### Valores
 
-| Value | Result     |
+| Valor | Resultado     |
 | ----- | ---------- |
-| 0     | Don't draw |
-| 1     | Draw       |
+| 0     | No lo dibuje |
+| 1     | Dibujelo       |
 | other | Unknown    |
 
 ---
 
 #### **`S_BorderVolume`**
 
-Opacity of the border.
+Opacidad del borde.
 
 Type: `2`  
 Format: `[X]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -412,25 +412,26 @@ Format: `[X]`
 }
 ```
 
-##### Values
+##### Valores
 
-| Value | Result        |
+| Valor | Resultado        |
 | ----- | ------------- |
-| 0     | No opacity    |
-| 0-1   | Other opacity |
-| 1     | Full opacity  |
+| 0     | Sin opacidad    |
+| 0-1   | Opacidad alternativa |
+| 1     | Opacidad total  |
 
 ---
 
 #### **`S_BorderSize`**
 
-Size of the border.
+Tamaño del borde.
 
-Type: `2`  
-Format: `[X]`  
-Example usage: `Cursor3`
+Tipo: `2`  
+Formato: `[X]`  
+Uso de ejemplo: `Cursor3`
 
-##### Example
+##### Ejemplo
+
 
 ```json
 {
@@ -440,20 +441,20 @@ Example usage: `Cursor3`
 }
 ```
 
-##### Values
+##### Valores
 
-Width in pixels.
+Ancho en pixeles
 
 ---
 
 #### **`S_BorderColorSelect0`**
 
-Sets the color of the border. Overwrites [`S_BorderColor0`](#s_bordercolor0).
+Establezca el color del borde. Sobreescribe [`S_BorderColor0`](#s_bordercolor0).
 
 Type: `1`  
 Format: `[X]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -463,20 +464,20 @@ Format: `[X]`
 }
 ```
 
-##### Values
+##### Valores
 
-Uses the [global color values](#global-color-values).
+Usa [global color values](#global-color-values).
 
 ---
 
 #### **`S_BorderColor0`**
 
-Sets the color of the border.
+Establezca el color del borde
 
 Type: `2`  
 Format: `[R, G, B, A]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -486,11 +487,11 @@ Format: `[R, G, B, A]`
 }
 ```
 
-##### Values
+##### Valores
 
-Normalized RGB decimals, from 0-1
+Decimales RGB Normalizados, from 0-1
 
-| Value | Result (normal rgb) |
+| Valor | Resultado (RGB normal) |
 | ----- | ------------------- |
 | 0     | 0                   |
 | 0-1   | 0-255               |
@@ -509,7 +510,7 @@ Format: `[X]`
 Common value: `1`  
 Example usage: `RdtBtnIconGame`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -519,25 +520,25 @@ Example usage: `RdtBtnIconGame`
 }
 ```
 
-##### Values
+##### Valores
 
-| Value | Result     |
+| Valor | Resultado     |
 | ----- | ---------- |
-| 0     | Don't draw |
-| 1     | Draw       |
+| 0     | No lo dibuje |
+| 1     | Dibujelo       |
 | other | Unknown    |
 
 ---
 
 #### **`S_DropShadowVolume`**
 
-Color density of the shadow.
+Densidad del color de la sombra
 
 Type: `2`  
 Format: `[X]`  
 Example usage: `RdtBtnIconGame`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -548,16 +549,16 @@ Example usage: `RdtBtnIconGame`
 ```
 
 ---
-
 #### **`S_DropShadowColorSelect`**
 
-Sets the color of the drop shadow. Overwrites [`S_DropShadowColor`](#s_dropshadowcolor).
+Establece el color de la sombra. Sobrescribe [`S_DropShadowColor`](#s_dropshadowcolor).
 
-Type: `1`  
-Format: `[X]`  
-Example usage: `RdtBtnIconGame`
+Tipo: `1`  
+Formato: `[X]`  
+Uso de ejemplo: `RdtBtnIconGame`
 
-##### Example
+##### Ejemplo
+
 
 ```json
 {
@@ -567,20 +568,20 @@ Example usage: `RdtBtnIconGame`
 }
 ```
 
-##### Values
+##### Valores
 
-Uses the [global color values](#global-color-values).
+Utiliza el [global color values](#global-color-values).
 
 ---
 
 #### **`S_DropShadowColor`**
 
-Sets the color of the drop shadow.
+Configure el color del Drop Shadow
 
 Type: `2`  
 Format: `[R, G, B, A]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -590,11 +591,11 @@ Format: `[R, G, B, A]`
 }
 ```
 
-##### Values
+##### Valores
 
-Normalized RGB decimals, from 0-1
+Decimales RGB Normalizados, from 0-1
 
-| Value | Result (normal rgb) |
+| Valor | Resultado (RGB normal) |
 | ----- | ------------------- |
 | 0     | 0                   |
 | 0-1   | 0-255               |
@@ -604,12 +605,12 @@ Normalized RGB decimals, from 0-1
 
 #### **`S_DropShadowAngle`**
 
-Shadow direction.
+Dirección de la sombra
 
 Type: `2`  
 Format: `[X]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -619,11 +620,11 @@ Format: `[X]`
 }
 ```
 
-##### Values
+##### Valores
 
-Direction in radians.
+Dirección en radianes.
 
-| Value          | Direction |
+| Valor          | Dirección |
 | -------------- | --------- |
 | 0              | right     |
 | 1.57079632679  | down      |
@@ -635,12 +636,12 @@ Direction in radians.
 
 #### **`S_DropShadowDistance`**
 
-Shadow fade/blur distance.
+Distancia de la sombra fade/blur.
 
 Type: `2`  
 Format: `[X]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -652,19 +653,19 @@ Format: `[X]`
 
 ---
 
-##### Values
+##### Valores
 
-Distance in pixels.
+Distancia en pixeles
 
 #### **`S_DropShadowSize`**
 
-Shadow size.
+Tamaño de la sombra.
 
 Type: `2`  
 Format: `[X]`  
 Example usage: `RdtBtnIconGame`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -674,23 +675,23 @@ Example usage: `RdtBtnIconGame`
 }
 ```
 
-##### Values
+##### Valores
 
-Width in pixels.
+Ancho en pixeles
 
 ---
 
 #### **`S_DropShadowFunction`**
 
 _Functionality unsure_
-How the `S_DropShadowDistance` is drawn. For example, blur or solid?
+Como es dibujado `S_DropShadowDistance` .Por ejemplo, blur o sólido?
 
 Type: `1`  
 Format: `[X]`  
 Common value: `5` and `4`  
 Example usage: `RdtBtnIconGame`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -705,14 +706,15 @@ Example usage: `RdtBtnIconGame`
 #### **`S_DropShadowKnockout`**
 
 _Functionality unsure_
-Enables/disables shadow fading?
+
+Activa/desactiva el shadow fading?
 
 Type: `1`  
 Format: `[X]`  
 Common value: `1`  
 Example usage: `RdtBtnIconGame`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -722,4 +724,4 @@ Example usage: `RdtBtnIconGame`
 }
 ```
 
-# [Continue to Animations](../animations/index.md) :octicons-arrow-right-16:
+# [Continue a Animaciones](../animations/index.md) :octicons-arrow-right-16:
