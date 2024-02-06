@@ -1,19 +1,19 @@
-##### :octicons-arrow-left-16: [Back common.szs](../index.md)
+##### :octicons-arrow-left-16: [Volver a common.szs](../index.md)
 
-#BgNml.bflyt
+# BgNml.bflyt
 
-**File:** `common.szs/blyt/BgNml.bflyt`
+**Archivo:** `common.szs/blyt/BgNml.bflyt`
 
 ---
 
-## Layout of `common.szs/blyt/BgNml.bflyt`
+## Diseño de `common.szs/blyt/BgNml.bflyt`
 
 <!-- prettier-ignore -->
 !!! Info
-    These aren't all the functions, most are unknown or the component is unimportant.
+    Estas no son todas las funciones, la mayoría son desconocidas o el componente no es importante.
 
-## Tree
+## Árbol
 
 -	**RootPane [pan1]**
 	-	**N_Root_00 [pan 1]** 
-		-	**N_Bg_00[pic1]** `Back Ground Panel without wallpaper, Color can be altered`
+		-	**N_Bg_00[pic1]** `Panel de fondo sin fondo de pantalla, el color puede ser alterado`
