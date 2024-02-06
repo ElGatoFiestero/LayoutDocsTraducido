@@ -1,32 +1,32 @@
-##### :octicons-arrow-left-16: [Back to Introduction](index.md)
+##### :octicons-arrow-left-16: [Volver a la Introducción](index.md)
 
-# Menu Files
+# Archivos de Menú
 
-In order to work efficiently, it is important to understand the structure of the Switch's menus and get familiar with the theming slang. This and a few following pages will introduce you to some basics.
+Para trabajar de manera eficiente, es importante entender la estructura de los menús de Switch y familiarizarse con la jerga del diseño de temas. Esta y las siguientes páginas te introducirán a algunos conceptos básicos.
 
-The Switch's menus can be found in multiple firmware files. Separated into multiple [applets](../definitions.md#applet). The following table shows which menus (supported in themes) can be found where:
+Los menús de Switch se pueden encontrar en varios archivos del firmware, separados en [applets](../definitions.md#applet). La siguiente tabla muestra en qué lugares se pueden encontrar los siguientes menús (compatibles con temas):
 
-| Applet CodeName | TitleID            | Menus                                                   |
+| Nombre en Código del Applet | TitleID            | Menús                                                   |
 | --------------- | ------------------ | ------------------------------------------------------- |
-| qlaunch         | `0100000000001000` | common, Home Menu, Lockscreen, All Apps, News, Settings |
-| playerSelect    | `0100000000001007` | Player Select                                           |
-| myPage          | `0100000000001013` | User Page                                               |
+| qlaunch         | `0100000000001000` | común, Menú Principal, Pantalla de Bloqueo, Todas las Aplicaciones, Noticias, Configuración |
+| playerSelect    | `0100000000001007` | Selección de Jugador                                    |
+| myPage          | `0100000000001013` | Página de Usuario                                       |
 
-Almost all menu-related applets also have a `common.szs` file that defines structures that should be used throughout all menus in the applet. They often contain the bottom bar (controller status, buttons). Custom themes unfortunately only support modifying the `common.szs` file in the `qlaunch` applet, and not the ones in `playerSelect` or `myPage`.
+Casi todos los applets relacionados con menús también tienen un archivo `common.szs` que define estructuras que deben usarse en todos los menús del applet. A menudo, contienen la barra inferior (estado del controlador, botones). Desafortunadamente, los temas personalizados solo admiten la modificación del archivo `common.szs` en el applet `qlaunch`, y no en los de `playerSelect` o `myPage`.
 
-## Filenames
+## Nombres de Archivos
 
-Every menu has its own file. Here is a list of the supported menus by the nxtheme format and their filenames:
+Cada menú tiene su propio archivo. Aquí tienes una lista de los menús admitidos por el formato nxtheme y sus nombres de archivo:
 
-| Menu             | Filename           |
+| Menú             | Nombre de Archivo   |
 | ---------------- | ------------------ |
-| common (qlaunch) | `common.szs`       |
-| Home Menu        | `ResidentMenu.szs` |
-| Lockscreen       | `Entrance.szs`     |
-| All Apps         | `Flaunch.szs`      |
-| News             | `Notification.szs` |
-| Settings         | `Set.szs`          |
-| Player Select    | `Psl.szs`          |
-| User Page        | `MyPage.szs`       |
+| común (qlaunch) | `common.szs`       |
+| Menú Principal        | `ResidentMenu.szs` |
+| Pantalla de Bloqueo       | `Entrance.szs`     |
+| Todas las Aplicaciones         | `Flaunch.szs`      |
+| Noticias             | `Notification.szs` |
+| Configuración         | `Set.szs`          |
+| Selección de Jugador    | `Psl.szs`          |
+| Página de Usuario        | `MyPage.szs`       |
 
-# [Continue to Filetypes](filetypes.md) :octicons-arrow-right-16:
+# [Continuar a Tipos de Archivos](filetypes.md) :octicons-arrow-right-16:
