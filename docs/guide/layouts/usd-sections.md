@@ -1,10 +1,11 @@
-##### :octicons-arrow-left-16: [Back to Getting Started](index.md)
+##### :octicons-arrow-left-16: [Volver a Empezando](index.md)
 
-# USD Sections
+# Secciones USD
 
-USD sections define additional data about another pane. It usually just follows the pane it is related to, but can be in any order as long as it has the name of the pane it belongs to.
+Las secciones USD definen datos adicionales sobre otro panel. Normalmente, siguen al panel al que están relacionados, pero pueden estar en cualquier orden siempre y cuando tengan el nombre del panel al que pertenecen.
 
-This is a simplified example of a pane followed by a `usd` section:
+Este es un ejemplo simplificado de un panel seguido de una sección `usd`:
+
 
 ```json
 {
@@ -48,32 +49,33 @@ This is a simplified example of a pane followed by a `usd` section:
 ```
 
 <!-- prettier-ignore -->
-!!! Important
-	The JSON code shown above is from 3DSKit and cannot be directly copied to a layout.  
-	All examples below *are* compatible.
+!!! Importante
+    El código JSON mostrado arriba es de 3DSKit y no puede ser copiado directamente a un diseño.  
+    Todos los ejemplos a continuación *son* compatibles.
 
-## Structure
+## Estructura
 
-A USD entry has a name, type and data section.
+Una entrada USD tiene un nombre, tipo y sección de datos.
 
-Name: `String`  
-Type: `Int`
+Nombre: `String`  
+Tipo: `Int`
+
 
 -   `0`: String
 -   `1`: Int
 -   `2`: Float
 
-Format: Array of values of specified type
+Formato: Matriz de valores de tipo especificado
 
-## Supported properties
+## Propiedades compatibles
 
-_Supported by the Switch Theme Injector_
+_Compatibles con el Inyector de Temas de Switch_
 
--   All, even undocumented ones.
+- Todas, incluso las no documentadas.
 
-## Global Color Values
+## Valores Globales de Color
 
-The system has special values that can be used throughout the system. These colors can change based on the system theme (light/dark), which is why they're often used.
+El sistema tiene valores especiales que pueden ser utilizados en todo el sistema. Estos colores pueden cambiar según el tema del sistema (claro/oscuro), razón por la cual se utilizan con frecuencia.
 
 <div class="color-table" markdown="1">
 
@@ -200,28 +202,29 @@ The system has special values that can be used throughout the system. These colo
 
 </div>
 
-## List of known USD sections
+## Lista de secciones USD conocidas
 
-These are the USD sections found throughout the home menu. They cannot be applied to every pane.
+Estas son las secciones USD encontradas en todo el menú principal. No se pueden aplicar a todos los paneles.
 
 ---
 
-### Color-related
+### Relacionadas con el color
 
 #### **`C_W`**
 
-A dynamic color controller that overwrites the BackgroundColor (Switch Layout Editor)/White Color (Switch Toolbox) of a material.  
-A property that is used to give elements certain colors. These colors are dynamic and can change based on the system theme.
-Used almost everywhere (all menus have to support dark and light theme).
+Un controlador de color dinámico que sobrescribe el BackgroundColor (Editor de Diseño de Switch)/Color Blanco (Caja de Herramientas de Switch) de un material.  
+Una propiedad que se utiliza para dar a los elementos ciertos colores. Estos colores son dinámicos y pueden cambiar según el tema del sistema.
+Usado casi en todas partes (todos los menús tienen que soportar temas oscuros y claros).
 
-Type: `1`  
-Format: `[X, X, X, X]`
+Tipo: `1`  
+Formato: `[X, X, X, X]`
 
-Often only the first `X` is non-`0`. Sometimes multiple `X`s are non-`0`.
+A menudo, solo el primer `X` es diferente de `0`. A veces, varios `X` son diferentes de `0`.
 
-For text panes, the second `X` may also be used. In the case that the flyt has a _decide key_, it has a special state: selected by the cursor. In this case, the first `X` will be the color when the text is _un-selected_, and the second `X` will be the color once the flyt **is** selected.
+Para paneles de texto, el segundo `X` también puede ser utilizado. En el caso de que el flyt tenga una _clave de decisión_, tiene un estado especial: seleccionado por el cursor. En este caso, el primer `X` será el color cuando el texto esté _no seleccionado_, y el segundo `X` será el color una vez que el flyt **esté** seleccionado.
 
-##### Example
+##### Ejemplo
+
 
 ```json
 {
@@ -231,21 +234,22 @@ For text panes, the second `X` may also be used. In the case that the flyt has a
 }
 ```
 
-##### Values
+##### Valores
 
-Uses the [global color values](#global-color-values).
+Utiliza los [valores globales de color](#valores-globales-de-color).
 
 ---
 
 #### **`C_B`**
 
-A dynamic color controller that overwrites the ForegroundColor (Switch Layout Editor)/Black Color (Switch Toolbox) of a material.  
-Doesn't always have an effect. Seems to be used in for example the cursor.
+Un controlador de color dinámico que sobrescribe el ForegroundColor (Editor de Diseño de Switch)/Color Negro (Caja de Herramientas de Switch) de un material.  
+No siempre tiene efecto. Parece ser utilizado, por ejemplo, en el cursor.
 
-Type: `1`  
-Format: `[X, X, X, X]`
+Tipo: `1`  
+Formato: `[X, X, X, X]`
 
-##### Example
+##### Ejemplo
+
 
 ```json
 {
@@ -259,16 +263,16 @@ Format: `[X, X, X, X]`
 
 #### **`C_Id`**
 
-_Functionality unknown_
+_Funcionalidad desconocida_
 
-Color doesn't change when C_W is set to another color -> C_Id probably 'overlaps' C_W.
-System theme color has almost no effect (except for `0` ('off')).
-All stuff here was tested on the lockscreen, and does vary per menu.
+El color no cambia cuando C_W se establece en otro color -> C_Id probablemente 'se superpone' a C_W.
+El color del tema del sistema casi no tiene efecto (excepto para `0` ('apagado')).
+Todo lo que se muestra aquí fue probado en la pantalla de bloqueo y puede variar según el menú.
 
-Type: `1`  
-Format: `[X]`
+Tipo: `1`  
+Formato: `[X]`
 
-##### Example
+##### Ejemplo
 
 ```json
 {
@@ -299,7 +303,8 @@ Format: `[X]`
 | 12    | blue-purpleish (50,80,240) |                                               |               |
 | 13    | blue-purpleish (50,80,240) |                                               |               |
 | 14    | white                      |                                               |               |
-| 15    | ligher grey                | Seems to overlap the entrance homebutton icon |               |
+| 15    | ligher grey                | Parece superponerse al ícono del botón de inicio de entrada
+ |               |
 | 16    | white                      |                                               |               |
 | 17    | white                      |                                               |               |
 | 18    | white                      |                                               |               |
