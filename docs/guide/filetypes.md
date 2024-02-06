@@ -50,27 +50,27 @@ Aquí hay una tabla de algunos formatos que han surgido a lo largo de los años:
 |                                                   | `(b)flan` | (**B**inary) ca**F**e **L**ayout **AN**imation       | [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/blob/c9e74e0be114885f347789f3bd348baccacf0842/File_Format_Library/FileFormats/Layout/CAFE/BFLAN.cs), [3DSkit](https://github.com/Tyulis/3DSkit/blob/master/doc/BFLAN.md) |
 | Switch (NX)                                       | `(b)ntx`  | (**B**inary) **N**x **T**e**X**ture                  | [Switch Toolbox](https://github.com/KillzXGaming/Switch-Toolbox/blob/c9e74e0be114885f347789f3bd348baccacf0842/File_Format_Library/FileFormats/Texture/BNTX.cs), [3DSkit](https://github.com/Tyulis/3DSkit/blob/master/doc/BNTX.md)       |
 
+(Si estás interesado en más nombres en clave de dispositivos Nintendo, visita
+esta página: [enlace](https://salty-salty-studios.com/shiz/misc/codenames.html))
 
-(If you're interested in more Nintendo device codenames, check
-out [this page](https://salty-salty-studios.com/shiz/misc/codenames.html))
+Todos estos formatos se basan en el mismo formato subyacente, pero simplemente usan nombres diferentes para diferentes consolas.
+El formato subyacente simplemente pasa por varias versiones. Por ejemplo, `BFLAN` aparece como versión, como 7.1.0/7.2.1
+en 3DS y
+8.6.0 en Switch.
 
-All these formats are based on the same underlying format, but simply use different names for different consoles.
-The underlying format simply goes through several versions. For example, `BFLAN` appears as version such as 7.1.0/7.2.1
-on 3DS and
-8.6.0 on Switch.
+Hay muchos más formatos de archivo utilizados en todos estos sistemas. Para obtener una lista completa, visita
+esta carpeta en GitHub (https://github.com/KillzXGaming/Switch-Toolbox/tree/master/File_Format_Library/FileFormats),
+que al menos te puede dar una idea de todos los formatos diferentes. La documentación real deberá buscarse
+en otro lugar.
 
-There are a lot more file formats used in all these systems. For a comprehensive list, check
-out [this folder on github](https://github.com/KillzXGaming/Switch-Toolbox/tree/master/File_Format_Library/FileFormats),
-which can at least give you an idea of all the different formats. Actual documentation will have to be searched for
-elsewhere.
-
-Check out these wikis for more information on all kinds of Nintendo file formats:
+Consulta estas wikis para obtener más información sobre todo tipo de formatos de archivo de Nintendo:
 - [Deep Sea Knowledge/OatMealDome Wiki](https://wiki.oatmealdome.me/Category:File_formats)
 - [3DBrew](https://www.3dbrew.org/wiki/Category:File_formats)
 - [Custom Mario Kart Wiiki](https://wiki.tockdom.com/wiki/List_of_File_Formats)
 - [Switchbrew](https://switchbrew.org/)
 
 
-### **[Continue to Layouts (bflyt)](layouts/index.md) :octicons-arrow-right-16:**
+### **[Continuar a Diseños (bflyt)](layouts/index.md) :octicons-arrow-right-16:**
 
-### **[Continue to Animations (bflan)](animations/index.md) :octicons-arrow-right-16:**
+### **[Continuar a Animaciones (bflan)](animations/index.md) :octicons-arrow-right-16:**
+
