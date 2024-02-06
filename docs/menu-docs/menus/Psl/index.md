@@ -2,18 +2,18 @@
 
 ---
 
-## Layout Files in `Psl.szs`
+## Archivos de diseño en `Psl.szs`
 
 <!-- prettier-ignore -->
 !!! Info
-    These aren't all files, because either the function is unknown or the component is unimportant.
+    Estos no son todos los archivos, porque la función es desconocida o el componente no es importante.
 
-| Filename                                                  | Hypothetical full name          | Function                                                                       	|
+| Nombre de archivo                                         | Nombre completo hipotético       | Función                                                                       	|
 | --------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------- |
-| [PslBtnCardPlayer.bflyt](PslBtnCardPlayer.bflyt/index.md) | PlayerSelectButtonCardPlayer    | Player Select Window 														    |
-| BgNav_Root.bflyt											| Background Navigation Root	  |																				    |
+| [PslBtnCardPlayer.bflyt](PslBtnCardPlayer.bflyt/index.md) | BotónSeleccionarJugadorTarjeta | Ventana de selección de jugador										    		|
+| BgNav_Root.bflyt											| Fondo Navegación Raíz			  |																				    |
 | BgNavNoHeader.bflyt										|								  |																				    |
-| BtnCardPlayerData_Root.bflyt								| Button Card Player Data Root	  | Possibly Psl Horizontal 'Arcade Archives' Version							    |
+| BtnCardPlayerData_Root.bflyt								| Botón Datos Jugador Raíz		  | Posiblemente la versión horizontal 'Arcade Archives' de Psl					    |
 | BtnIslandNml.bflyt										|								  |																				    |
 | BtnLineIconOnly.bflyt										|								  |																				    |
 | BtnLineNml.bflyt											|								  |																				    |
