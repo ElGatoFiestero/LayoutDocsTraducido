@@ -1,23 +1,23 @@
-##### :octicons-arrow-left-16: [Back common.szs](../index.md)
+##### :octicons-arrow-left-16: [Volver a common.szs](../index.md)
 
-#BtnLineNml.bflyt
+# BtnLineNml.bflyt
 
-**File:** `common.szs/blyt/BtnLineNml.bflyt`
+**Archivo:** `common.szs/blyt/BtnLineNml.bflyt`
 
 ---
 
-## Layout of `common.szs/blyt/BtnLineNml.bflyt`
+## Diseño de `common.szs/blyt/BtnLineNml.bflyt`
 
 <!-- prettier-ignore -->
 !!! Info
-    These aren't all the functions, most are unknown or the component is unimportant.
+    Estas no son todas las funciones, la mayoría son desconocidas o el componente no es importante.
 
-## Tree
+## Árbol
 
 -	**RootPane [pan1]**
 	-	**N_Root_00 [pan 1]** 
 		-	**P_BtnBase [pic 1]** 
-			-	**P_BtnBase [pic 1]** `Button seperator colors`
+			-	**P_BtnBase [pic 1]** `Colores de separación de botones`
 			-	**P_BtnBaseInv [pic 1]**
 		-	**N_BtnCnt [pan 1]**
 			-	**T_00 [txt 1]** 
