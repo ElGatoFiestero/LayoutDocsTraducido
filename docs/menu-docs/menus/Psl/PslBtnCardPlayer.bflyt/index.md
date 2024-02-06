@@ -10,7 +10,7 @@
 
 <!-- prettier-ignore -->
 !!! Info
-    These aren't all the functions, most are unknown or the component is unimportant.
+    Estas no son todas las funciones, la mayoría son desconocidas o el componente no es importante.
 
 ## Tree
 
