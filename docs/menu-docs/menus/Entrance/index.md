@@ -32,8 +32,10 @@
 | GTNumL.bflyt 						   | Número de tiempo mediano 			   | Texto/número en el HUD 											|
 | EntBtnChildLock.bflyt 			   | Bloqueo infantil botón de entrada	   | Botón de bloqueo infantil con iconos								|
 
-Tabla en inglés para desambiguación
-
+<details>
+  <summary>Tabla en inglés para desambiguación</summary>
+  
+ 
 | Filename       					   | Hypothetical full name 			   | Function                                                           |
 | ------------------------------------ | ------------------------------------- | ------------------------------------------------------------------ |
 | BgMask.bflyt						   | BackGround Mask		 		 	   | background mask image/color										|
@@ -57,3 +59,8 @@ Tabla en inglés para desambiguación
 | GTNumM.bflyt 						   | G Time Number Medium 				   | Number text/icon in the hud										|
 | GTNumL.bflyt 						   | G Time Number Large  				   | Number text/icon in the hud 										|
 | EntBtnChildLock.bflyt 			   | Enterance Button Child Lock		   | Child Lock Button with icons 										|
+
+
+  
+</details>
+
