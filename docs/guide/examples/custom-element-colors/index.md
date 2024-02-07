@@ -1,20 +1,21 @@
-# Custom Element Colors
+# Colores de Elementos Personalizados
 
-![Preview](preview.jpg)  
-_[Blue Menu - Home](https://themezer.net/themes/homemenu/Blue-Menu-Home-bd2) by Maxu/Maximum_
+![Vista previa](preview.jpg)  
+_[Menú azul - Inicio](https://themezer.net/themes/homemenu/Blue-Menu-Home-bd2) por Maxu/Maximum_
 
 ---
 
-Modifying the colors of for example buttons, text, lines icons is possible.
-A theme that makes use of this functionality is [Blue by Mazu/Maximum](https://themezer.net/packs/Blue-Menu-1b4). Any color is supported.
+Es posible modificar los colores de, por ejemplo, botones, texto, líneas e iconos.
+Un tema que hace uso de esta funcionalidad es [Blue por Mazu/Maximum](https://themezer.net/packs/Blue-Menu-1b4). Se admiten cualquier color.
 
 <!-- prettier-ignore -->
 !!! Tip
-	Custom colors can be mixed with [custom applet icons](../custom-applet-icons/index.md).
+	Los colores personalizados se pueden mezclar con [iconos de applet personalizados](../custom-applet-icons/index.md).
 
-## Example Code
+## Código de Ejemplo
 
-Let's say you want the album icon to be red (`#FF0000`). The following example shows how to do that:
+Digamos que quieres que el ícono del álbum sea rojo (`#FF0000`). El siguiente ejemplo muestra cómo hacerlo:
+
 
 ```json
 {
@@ -50,22 +51,23 @@ Let's say you want the album icon to be red (`#FF0000`). The following example s
 ```
 
 <!-- prettier-ignore -->
-!!! Important
-	-   Since the color format is actually `FFbbggrr` (alpha, blue, green, red) you'll have to use a reversed version of the normal hex color. For example, the hex color code `0000FF` (rgb)/`0000FFFF` (rgba) would become `FFFF0000` (abgr).
+!!! Importante
+    -   Dado que el formato de color es realmente `FFbbggrr` (alfa, azul, verde, rojo), deberás usar una versión invertida del color hexadecimal normal. Por ejemplo, el código de color hexadecimal `0000FF` (rgb)/`0000FFFF` (rgba) se convertiría en `FFFF0000` (abgr).
 
 ---
 
-# Custom Cursor Color
+# Color de Cursor Personalizado
 
-[See this page](../custom-cursor/index.md)
+[Ver esta página](../custom-cursor/index.md)
 
-## Example Code for all Home Menu elements
+## Código de Ejemplo para todos los elementos del Menú de Inicio
 
-For this, you have to replace `FFbbggrr` with the color you want. Most editors allow you to replace multiple occurrences at once.
+Para esto, debes reemplazar `FFbbggrr` con el color que desees. La mayoría de los editores te permiten reemplazar varias ocurrencias a la vez.
 
 <!-- prettier-ignore -->
-!!! Warning
-	**DO NOT** change the alpha channel in this example (keep the `FF`). Only modify lowercase `bbggrr`.
+!!! Advertencia
+    **NO** cambies el canal alfa en este ejemplo (mantén el `FF`). Solo modifica `bbggrr` en minúsculas.
+
 
 ```json
 {
