@@ -155,24 +155,24 @@ Repite la operación para `RdtBtnIconGame_Inactive.bflan`. El mismo proceso exce
 
 Y con esto, casi hemos terminado. Ahora finalmente es el momento de diferenciar. **Asegúrate de guardar las ediciones en todas las ventanas abiertas.**
 
-
 **16-**
 
-Go back to the `.szs` box window, select `Tools` in the top menu, then the `This is the edited szs` option. You'll be prompted with a new window. Browse the unedited `ResidentMenu.szs` that we've been keeping in `Desktop/`, leave the checkbox as it is and click on `Generate diff`.
+Regresa a la ventana del cuadro `.szs`, selecciona `Herramientas` en el menú superior, luego la opción `Esta es la szs editada`. Se te abrirá una nueva ventana. Busca el archivo `ResidentMenu.szs` sin editar que hemos estado guardando en `Escritorio/`, deja la casilla de verificación como está y haz clic en `Generar diferencia`.
 
-![Diffing](tuto11.jpg "Diffing")
+![Diferenciación](tuto11.jpg "Diferenciación")
 
-This will output a `.json` file we will be using to compile a `.nxtheme` with Switch Theme Injector. Finally done!
+Esto producirá un archivo `.json` que utilizaremos para compilar un `.nxtheme` con Switch Theme Injector. ¡Finalmente terminado!
 
-![Result](home.jpg "Result")
+![Resultado](home.jpg "Resultado")
 
-(the hovered game icon scaling has been reduced to `1.2` since it was overlapping and I also hid the game title text)
+(el escalado del ícono del juego seleccionado se ha reducido a `1.2` ya que se superponía y también oculté el texto del título del juego)
 
 !!! tip
-      Checking the output `.json`, you can see that groups were added at the end of the `RdtBtnIconGame.bflyt` section. There is also an added `Anims` section at the very end of the code. Theoretically you could totally make animations without using Layout Editor at all, but I don't recommend this option as the text formatting of the `Anims` section is quite messed up and unintelligible, although it's fine for minor adjustments.
+    Al revisar el archivo `.json` de salida, puedes ver que se agregaron grupos al final de la sección `RdtBtnIconGame.bflyt`. También hay una sección `Anims` agregada al final del código. Teóricamente, podrías hacer animaciones por completo sin usar el Editor de diseño en absoluto, pero no recomiendo esta opción ya que el formato de texto de la sección `Anims` está bastante desordenado e incomprensible, aunque está bien para ajustes menores.
 
-      | ![AddGroups section](tuto12.jpg "AddGroups section") | ![Anims section](tuto13.jpg "Anils section") |
-      |------------------------------------------------------|----------------------------------------------|
-      | `AddGroups` section                                  | `Anims` section                              |
+    | ![Sección de Agregar Grupos](tuto12.jpg "Sección de Agregar Grupos") | ![Sección de Anims](tuto13.jpg "Sección de Anims") |
+    |-----------------------------------------------------------------------|--------------------------------------------------|
+    | Sección `Agregar Grupos`                                              | Sección `Anims`                                  |
 
-# [Continue to Animations: templates](anim-templates.md) :octicons-arrow-right-16:
+# [Continúa con Animaciones: plantillas](anim-templates.md) :octicons-arrow-right-16:
+
