@@ -1,32 +1,33 @@
-##### :octicons-arrow-left-16: [Back to Animations: main tutorial](main-tutorial.md)
+##### :octicons-arrow-left-16: [Volver a Animaciones: tutorial principal](main-tutorial.md)
 
-# Animations: bflan templates
+# Animaciones: plantillas bflan
 ---
 
-Layout Editor release 15 has introduced user-defined templates, a very convenient addition that aims to speed up the animation making process which can be very tedious as-is in some specific cases. These templates are especially really useful if you want to make color based animations or have multiple occurrences of the same animation within your theme.
+La versión 15 del Editor de Diseño ha introducido plantillas definidas por el usuario, una adición muy conveniente que tiene como objetivo acelerar el proceso de creación de animaciones, que puede ser muy tedioso en algunos casos específicos. Estas plantillas son especialmente útiles si deseas realizar animaciones basadas en colores o tienes múltiples ocurrencias de la misma animación dentro de tu tema.
 
 !!! info
-        `.bflan` templates were not implemented in the previous releases of Layout Editor. Be sure to grab the latest release.
+        Las plantillas `.bflan` no se implementaron en las versiones anteriores del Editor de Diseño. Asegúrate de obtener la última versión.
 
-!!! cite "Check out the tables!"
-        In the main tutorial we focused on creating scaling animations that only involved `FLPA` `PaiTag`s and two specific `AnimationTarget` values. Here we will go further using `FLVC` and different `AnimationTarget` values. You might want to check the following tables out and keep them nearby while reading through this section.
+!!! cite "¡Echa un vistazo a las tablas!"
+        En el tutorial principal nos centramos en crear animaciones de escala que solo involucraban `FLPA` `PaiTag`s y dos valores específicos de `AnimationTarget`. Aquí iremos más lejos usando `FLVC` y diferentes valores de `AnimationTarget`. Puede que quieras consultar las siguientes tablas y tenerlas cerca mientras lees esta sección.
 
-        - **[AnimationTargets and PaiTags](./paitags-and-targets.md) :octicons-arrow-right-16:**
+        - **[AnimationTargets y PaiTags](./paitags-and-targets.md) :octicons-arrow-right-16:**
 
-## How does it work?
+## ¿Cómo funciona?
 
-Rather than manually adding entries within `.bflan` files as we did in the main tutorial, we can automate the operation by writing templates instead. It might not be relevant for minor tweaking, but it starts becoming quite necessary for bigger and repetitive tasks.
+En lugar de agregar manualmente entradas dentro de archivos `.bflan` como lo hicimos en el tutorial principal, podemos automatizar la operación escribiendo plantillas en su lugar. Puede que no sea relevante para ajustes menores, pero comienza a ser bastante necesario para tareas más grandes y repetitivas.
 
-Each template comes as a pair of two files:
+Cada plantilla viene como un par de dos archivos:
 
-- a `.template` file that defines the actual animation
-- a `.json` descriptor that implements the `.template` file and defines properties and variables meant to be used within the `.template` file
+- un archivo `.template` que define la animación real
+- un descriptor `.json` que implementa el archivo `.template` y define propiedades y variables destinadas a ser utilizadas dentro del archivo `.template`
 
-Templates must be placed in the `BflanTemplates` folder of your Layout Editor folder.
+Las plantillas deben colocarse en la carpeta `BflanTemplates` de tu carpeta del Editor de Diseño.
 
-![Templates](templates0.JPG "Templates")
+![Plantillas](templates0.JPG "Plantillas")
 
-To get a better grasp, here is the template that the release 15 provides by default:
+Para comprender mejor, aquí está la plantilla que proporciona la versión 15 por defecto:
+
 
 - `ColorAnimation.template`
 ```
@@ -86,34 +87,34 @@ To get a better grasp, here is the template that the release 15 provides by defa
 }
 ```
 
-At this point I hope you see how powerful it is: you can type your entire animation by hand rather than having to do one-by-one operations through Layout Editor's GUI. Indeed, `AnimationTarget` and `KeyFrames` are all defined within `ColorAnimation.template`, and parameters are used (e.g. `%START_FRAME%`, `%RED_START_VAL%`, etc.) to store input values.
+En este punto, espero que veas lo poderoso que es: puedes escribir toda tu animación a mano en lugar de tener que hacer operaciones una por una a través de la interfaz gráfica de usuario del Editor de Diseño. De hecho, `AnimationTarget` y `KeyFrames` están todos definidos dentro de `ColorAnimation.template`, y se utilizan parámetros (por ejemplo, `%START_FRAME%`, `%RED_START_VAL%`, etc.) para almacenar los valores de entrada.
 
-We won't discard Layout Editor though, templates are meant to be used with it — that's the main feature of release 15. To load templates, open a `.bflan` and simply right click on the desired `[Pane]` entry and hover `Insert template`. This will show a dropdown list containing your templates, in this case `Animate color RGBA` as per the `FileName` in the `.json` descriptor. Select your template.
+Sin embargo, no descartaremos el Editor de Diseño, las plantillas están destinadas a ser utilizadas con él, esa es la característica principal de la versión 15. Para cargar plantillas, abre un archivo `.bflan` y simplemente haz clic derecho en la entrada `[Pane]` deseada y pasa el mouse sobre `Insertar plantilla`. Esto mostrará una lista desplegable que contiene tus plantillas, en este caso `Animar color RGBA` según el `FileName` en el descriptor `.json`. Selecciona tu plantilla.
 
-![Templates](templates1.jpg "Templates")
+![Plantillas](templates1.jpg "Plantillas")
 
-A new window will open, containing entries that reflect what is defined in `ColorAnimation.template`. Values in there are editable.
+Se abrirá una nueva ventana, que contiene entradas que reflejan lo que se define en `ColorAnimation.template`. Los valores allí son editables.
 
-![Templates](templates2.jpg "Templates")
+![Plantillas](templates2.jpg "Plantillas")
 
-Make your adjustments if needed, confirm and your animation should be created.
+Haz tus ajustes si es necesario, confirma y tu animación debería crearse.
 
-![Templates](templates3.JPG "Templates")
+![Plantillas](templates3.JPG "Plantillas")
 
-We will see more in-depth examples in the following sections.
+Veremos ejemplos más detallados en las siguientes secciones.
 
-## 1st example: one animation pattern
+## 1er ejemplo: un patrón de animación
 
-Let's say I want to animate my game icons. I want this animation to apply for the game icons in both `ResidentMenu.szs` (home screen) and `Flaunch.szs` (all apps), but I don't want to go through the exact same process of manually creating entries within the `.bflyt` multiple times. That's where templates come in handy.
+Digamos que quiero animar los iconos de mis juegos. Quiero que esta animación se aplique a los iconos de los juegos tanto en `ResidentMenu.szs` (pantalla de inicio) como en `Flaunch.szs` (todas las aplicaciones), pero no quiero pasar por el mismo proceso exacto de crear entradas manualmente dentro del `.bflyt` varias veces. Ahí es donde entran en juego las plantillas.
 
-I'll purposely choose a "complex" animation pattern so we can really see how convenient templates are.
+Elegiré intencionalmente un patrón de animación "complejo" para que realmente veamos lo convenientes que son las plantillas.
 
-Here is how I want to set it up:
+Así es como quiero configurarlo:
 
-- the icon should go upward by `20px` relative to its base position, taking `4` frames
-- the icon should *then* scale up by a `1.04` factor, taking `2` frames
+- el icono debería subir `20px` con respecto a su posición base, tomando `4` cuadros
+- luego el icono debería *entonces* escalar con un factor de `1.04`, tomando `2` cuadros
 
-Hence we will need to use the following values of `PaiTag` and `AnimationTarget`:
+Por lo tanto, necesitaremos usar los siguientes valores de `PaiTag` y `AnimationTarget`:
 
 ```
 📜RdtBtnIconGame_Active.bflan (ResidentMenu.szs)
@@ -131,7 +132,7 @@ Hence we will need to use the following values of `PaiTag` and `AnimationTarget`
    ┗ AnimationTarget: 7 (y-axis scale) 
 ```
 
-This is how the template looks like:
+Así es como se ve la plantilla:
 
 - **`gameIcon.template`**
 ```
@@ -237,12 +238,13 @@ This is how the template looks like:
 }
 ```
 
-Please take those as general principles:
+Toma estos como principios generales:
 
-- All the values of interest (i.e. that will determine how the animation actually looks) are stored in parameters: `%START_FRAME_POSITION%`, `%END_FRAME_POSITION%`, `%START_FRAME_SCALE%`, `%END_FRAME_SCALE%`, `%BASE_POSITION%`, `%POSITION_OFFSET%`, `%BASE_SCALE%`, `%SCALE_FACTOR%`
-- In the `.json` descriptor, parameters' value type (specified by `Kind`) must be defined accordingly: `Int` (integer), `Float` (real number), `String` (text)
-- Each defined parameter within the `.template` has its own entry in the `.json` descriptor. For example:
+- Todos los valores de interés (es decir, que determinarán cómo se ve realmente la animación) se almacenan en parámetros: `%START_FRAME_POSITION%`, `%END_FRAME_POSITION%`, `%START_FRAME_SCALE%`, `%END_FRAME_SCALE%`, `%BASE_POSITION%`, `%POSITION_OFFSET%`, `%BASE_SCALE%`, `%SCALE_FACTOR%`
+- En el descriptor `.json`, el tipo de valor de los parámetros (especificado por `Kind`) debe definirse en consecuencia: `Int` (entero), `Float` (número real), `String` (texto)
+- Cada parámetro definido dentro del archivo `.template` tiene su propia entrada en el descriptor `.json`. Por ejemplo:
     - **`%SCALE_FACTOR%`** :octicons-arrow-right-16:
+
         ```json
         {
           "Kind": "Float",
@@ -253,9 +255,10 @@ Please take those as general principles:
         ```
 
 !!! tip
-    - My personal recommendation is typing the `.template` first so you can properly set up your parameters in the `.json` afterwards
-    - You can name parameters to your convenience, just enclose them with `%` symbols
-    - Adding more keyframes is possible by simply expanding the `KeyFrames` array for the `AnimationTarget` of your choice within the `.template`:
+    - Mi recomendación personal es escribir primero el archivo `.template` para que puedas configurar correctamente tus parámetros en el archivo `.json` después.
+    - Puedes nombrar los parámetros según tu conveniencia, simplemente enciérralos con símbolos `%`.
+    - Agregar más fotogramas clave es posible simplemente expandiendo la matriz `KeyFrames` para el `AnimationTarget` de tu elección dentro del archivo `.template`:
+
         ```
         { "Frame": %FRAME_ONE%, "Value": %VALUE_ONE%, "Blend": 0 },
         { "Frame": %FRAME_TWO%, "Value": %VALUE_TWO%, "Blend": 0 },
@@ -264,27 +267,28 @@ Please take those as general principles:
         ...
         ```
 
-We can proceed on loading this new template onto Layout Editor and finally testing on console. I will add this animation pattern to `RdtBtnIconGame_Active.bflan` and `FlcBtnIconGame_Active.bflan` from `ResidentMenu.szs` and `Flauncher.szs` respectively.
+Podemos proceder cargando esta nueva plantilla en el Editor de Diseño y finalmente probándola en la consola. Agregaré este patrón de animación a `RdtBtnIconGame_Active.bflan` y `FlcBtnIconGame_Active.bflan` desde `ResidentMenu.szs` y `Flauncher.szs` respectivamente.
 
-![Templates](templates4.JPG "Templates")
+![Plantillas](templates4.JPG "Plantillas")
 
-![Templates](templates5.JPG "Templates")
+![Plantillas](templates5.JPG "Plantillas")
 
-## 2nd example: color based animations
+## 2do ejemplo: animaciones basadas en color
 
 !!! info
-        For more details about colors, see the following section:
+        Para obtener más detalles sobre los colores, consulta la siguiente sección:
         
-        - **[PaiTags and Targets - FLVC (Vertex Color)](paitags-and-targets.md#flvc-vertex-color) :octicons-arrow-right-16:**
+        - **[PaiTags y Targets - FLVC (Color de vértice)](paitags-and-targets.md#flvc-vertex-color) :octicons-arrow-right-16:**
 
-At this point you know pretty much everything about `.bflan` templates. In this section I'll just show you how it applies to color based animations.
+En este punto, sabes casi todo sobre las plantillas `.bflan`. En esta sección solo te mostraré cómo se aplican a animaciones basadas en color.
 
-Let's say I want to change the background color of the home menu Sleep Mode button when it is selected. Here is how I choose to set up this animation:
+Digamos que quiero cambiar el color de fondo del botón de Modo de Suspensión del menú principal cuando está seleccionado. Así es como elijo configurar esta animación:
 
-- the background transitions from `rgb(18, 18, 18)` (dark gray) to `rgb(163, 42, 63)` (crimson red)
-- the transition duration is `2` frames
+- el fondo transita desde `rgb(18, 18, 18)` (gris oscuro) hasta `rgb(163, 42, 63)` (rojo carmesí)
+- la duración de la transición es de `2` cuadros
 
-This time around, `PaiTag` and `AnimationTarget`s are the following:
+Esta vez, los `PaiTag` y `AnimationTarget` son los siguientes:
+
 
 ```
 📜RdtBtnPow_Active.bflan (ResidentMenu.szs)
@@ -304,9 +308,9 @@ This time around, `PaiTag` and `AnimationTarget`s are the following:
 ```
 
 !!! info
-    You might notice that `AnimationTarget` = `3`, `7`, `11`, `15` are missing. These values are used for transparency which I'm not interested in here. Refer to the [tables](./paitags-and-targets.md) for more details.
+    Puede que notes que faltan `AnimationTarget` = `3`, `7`, `11`, `15`. Estos valores se utilizan para la transparencia, lo cual no me interesa aquí. Consulta las [tablas](./paitags-and-targets.md) para obtener más detalles.
 
-We will make some adjustments to the pre-configured template that Layout Editor 15 provides by default:
+Haremos algunos ajustes a la plantilla preconfigurada que proporciona por defecto el Editor de Diseño 15:
 
 - **`ColorAnimation.template`**
 ```
@@ -511,19 +515,19 @@ We will make some adjustments to the pre-configured template that Layout Editor 
 }
 ```
 
-![Templates](templates6.JPG "Templates")
+![Plantillas](templates6.JPG "Plantillas")
 
-![Templates](templates7.JPG "Templates")
+![Plantillas](templates7.JPG "Plantillas")
 
-This template has been used to create **[Unison R](https://themezer.net/packs/Unison-R-5fc)**, this is how it looks (with *some* aesthetics added but the changing color part still holds)
+Esta plantilla se ha utilizado para crear **[Unison R](https://themezer.net/packs/Unison-R-5fc)**, así es como se ve (con *algunos* aspectos estéticos agregados pero la parte de cambio de color sigue siendo la misma)
 
-![Templates](unisonR_2.jpg "Templates")
+![Plantillas](unisonR_2.jpg "Plantillas")
 
-!!! cite "About Layout Editor and color animations"
-    Before Layout Editor release 15, making color based animations was tedious because of how colors from UI elements are handled, and for animations especially there is no option for hexadecimal colors. Each corner of a pane (as in actual corners: top left, top right, bottom left, bottom right) has its unique RGBA components and corresponding `AnimationTarget`, meaning that we needed to *manually* add no less than **12 entries** to the `.bflan` just in order to change a pane's color (not taking transparency into account) which obviously isn't great efficiency-wise. As you probably can see, templates facilitate this task by a lot.
+!!! cite "Acerca del Editor de Diseño y animaciones de color"
+    Antes del lanzamiento del Editor de Diseño versión 15, hacer animaciones basadas en color era tedioso debido a cómo se manejan los colores de los elementos de la interfaz de usuario, y para las animaciones en particular no hay opción para colores hexadecimales. Cada esquina de un panel (como en esquinas reales: arriba a la izquierda, arriba a la derecha, abajo a la izquierda, abajo a la derecha) tiene sus componentes RGBA únicos y el correspondiente `AnimationTarget`, lo que significa que necesitábamos *agregar manualmente* no menos de **12 entradas** al archivo `.bflan` solo para cambiar el color de un panel (sin tener en cuenta la transparencia), lo que obviamente no es muy eficiente en términos de tiempo. Como probablemente puedas ver, las plantillas facilitan enormemente esta tarea.
 
-## Defining targets
+## Definiendo objetivos
 
-As per [Layout Editor source code](https://github.com/FuryBaguette/SwitchLayoutEditor/blob/master/BflytPreview/Automation/BflanTemplates.cs), you can also use `.bflan` templates to add panes to the `Pai1` section, adding even more automation to the process. I haven't personally tested it but feel free to experiment and share your templates.
+Según [código fuente del Editor de Diseño](https://github.com/FuryBaguette/SwitchLayoutEditor/blob/master/BflytPreview/Automation/BflanTemplates.cs), también puedes usar plantillas `.bflan` para agregar paneles a la sección `Pai1`, agregando aún más automatización al proceso. Personalmente no lo he probado, pero siéntete libre de experimentar y compartir tus plantillas.
 
-# [Continue to Animations: extras](going-further.md) :octicons-arrow-right-16:
+# [Continuar con Animaciones: extras](going-further.md) :octicons-arrow-right-16:
