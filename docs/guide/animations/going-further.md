@@ -1,106 +1,80 @@
-##### :octicons-arrow-left-16: [Back to Animations: templates](anim-templates.md)
+##### :octicons-arrow-left-16: [Volver a Animaciones: plantillas](anim-templates.md)
 
-# More on animations
+# Más sobre animaciones
 ---
 
-## Useful tables
+## Tablas útiles
 
-### PaiTag entries & AnimationTarget values
+### Entradas de PaiTag y valores de AnimationTarget
 
-`AnimationTarget` values and subsequent animation behavior change depending on the defined `PaiTag`. A comprehensive list of animation Tags and Targets can be viewed on the following page:
+Los valores de `AnimationTarget` y el comportamiento de la animación subsecuente cambian dependiendo del `PaiTag` definido. Una lista completa de Etiquetas y Objetivos de animación se puede ver en la siguiente página:
 
-##### **[PaiTags and AnimationTargets](./paitags-and-targets.md) :octicons-arrow-right-16:**
+##### **[PaiTags y AnimationTargets](./paitags-and-targets.md) :octicons-arrow-right-16:**
 
-### bflyts, bflans, szs
+### Archivos bflyt, bflan, szs
 
-Some `.bflyt`s, `.bflan`s and their corresponding `.szs` are also documented there:
+Algunos `.bflyt`, `.bflan` y sus correspondientes `.szs` también están documentados allí:
 
-##### **[szs, bflyt, bflan files](./szs-bflyt-bflan.md) :octicons-arrow-right-16:**
+##### **[Archivos szs, bflyt, bflan](./szs-bflyt-bflan.md) :octicons-arrow-right-16:**
 
-## Active and Inactive states
+## Estados activos e inactivos
 
-We can find specific pairs of `.bflan` files for some `.bflyt`s such as `<bflyt>_Active.bflan` / `<bflyt>_Inactive.bflan`.
+Podemos encontrar pares específicos de archivos `.bflan` para algunos `.bflyt`s como `<bflyt>_Active.bflan` / `<bflyt>_Inactive.bflan`.
 
-In the main tutorial section, we worked on `RdtBtnIconGame_Active.bflan` / `RdtBtnIconGame_Inactive.bflan`, but there are a couple others as well, e.g. `RdtBtnSet_Active.bflan` / `RdtBtnSet_Inactive.bflan`.
+En la sección principal del tutorial, trabajamos en `RdtBtnIconGame_Active.bflan` / `RdtBtnIconGame_Inactive.bflan`, pero también hay un par más, por ejemplo `RdtBtnSet_Active.bflan` / `RdtBtnSet_Inactive.bflan`.
 
-##### **[szs, bflyt, bflan files](./szs-bflyt-bflan.md) :octicons-arrow-right-16:**
+##### **[Archivos szs, bflyt, bflan](./szs-bflyt-bflan.md) :octicons-arrow-right-16:**
 
-- `<bflyt>_Active.bflan` animates `<bflyt>` panes when the UI element is **selected**
+- `<bflyt>_Active.bflan` anima los paneles `<bflyt>` cuando el elemento de la interfaz de usuario está **seleccionado**
 
-- `<bflyt>_Inactive.bflan` animates `<bflyt>` panes when the UI element is **being unselected**
+- `<bflyt>_Inactive.bflan` anima los paneles `<bflyt>` cuando el elemento de la interfaz de usuario está **siendo deseleccionado**
 
 !!! info
-      More `.bflan` files follow a similar logic, e.g. `<bflyt>_FocusKey.bflan` / `<bflyt>_UnFocusKey.bflan`. These aren't fully tested nor documented yet.
+      Más archivos `.bflan` siguen una lógica similar, por ejemplo, `<bflyt>_FocusKey.bflan` / `<bflyt>_UnFocusKey.bflan`. Estos aún no están completamente probados ni documentados.
 
 !!! warning
-      Edits made for Inactive `.bflan`s will overwrite the values you might have defined in your `.json` layout. For example, if you've set the album button's x-coordinate to `660px` in your `.json` while it is set to `680px` in the Inactive `.bflan`, the `680px` value will take priority over the `660px` one and be applied.
+      Las ediciones realizadas para los archivos `.bflan` Inactivos sobrescribirán los valores que hayas definido en tu diseño `.json`. Por ejemplo, si has establecido la coordenada x del botón del álbum en `660px` en tu `.json` mientras está establecida en `680px` en el `.bflan` Inactivo, el valor `680px` tendrá prioridad sobre el `660px` y se aplicará.
 
-## Looping animations
+## Animaciones en bucle
 
-It is possible to make looping animations. These can be seen
-in [Migush](https://themezer.net/creators/123859829453357056)'
-s [JAG layout](https://themezer.net/layouts/homemenu/JAG-Layout-2) where selected game icons follow a scale up and down
-idle animation. All you have to do to make a looping animation is to set the `Flags` value to `1` (while `0` disables
-the loop) in the `Pai1 section` of a `.bflan` file. Unfortunately, **more complex animations that combine multiple
-transformations can't be achieved properly** since the flag is applied to the whole `.bflan`. More explicitly, a
-game icon wouldn't be able to move `10px` above AND THEN follow a looping scale up and down. In such a case, the y-displacement would also be looped.
+Es posible hacer animaciones en bucle. Estas se pueden ver en el [diseño de Migush](https://themezer.net/creators/123859829453357056) llamado [JAG layout](https://themezer.net/layouts/homemenu/JAG-Layout-2), donde los iconos de juegos seleccionados siguen una animación de agrandamiento y reducción como actividad de inactividad. Todo lo que tienes que hacer para hacer una animación en bucle es establecer el valor de `Flags` en `1` (mientras que `0` desactiva el bucle) en la sección `Pai1` de un archivo `.bflan`. Desafortunadamente, **las animaciones más complejas que combinan múltiples transformaciones no se pueden lograr correctamente** ya que la bandera se aplica a todo el archivo `.bflan`. Más explícitamente, un icono de juego no sería capaz de moverse `10px` arriba Y LUEGO seguir una animación en bucle de agrandamiento y reducción. En tal caso, el desplazamiento en y también se repetiría.
 
-## Fade in and fade out animations
+## Animaciones de fundido de entrada y salida
 
-Let's say I want a blinking cursor for the navigation menu in the settings applet. This involves using `FLVC` and `AnimationTarget` = `16`. I will briefly describe the process but it is basically the same as in the main tutorial:
+Digamos que quiero un cursor parpadeante para el menú de navegación en la aplicación de configuración. Esto implica usar `FLVC` y `AnimationTarget` = `16`. Voy a describir brevemente el proceso, pero básicamente es lo mismo que en el tutorial principal:
 
-1. Open `Set.szs` then `BtnNav_Root_Active.bflan`. **As always when creating custom animations,** do the proper modifications to
-   the `Pat1` and `Pai1` sections. Add the `N_BtnFocusKey` entry (cursor pane) to the list, create a **`FLVC` entry** (
-   not `FLPA`!) right under it, and then another entry under `FLVC`. I chose to set my key frames as shown on the screenshots below.
-2. We'll also edit `BtnNav_Root_Inactive.bflan`, otherwise navigating the tabs will interrupt the cursor animation and
-   lock it to a certain frame (same behavior as in our previous game icon animation). Considering that, we simply "
-   reset" `N_BtnFocusKey`'s state (after adding this pane to the list) by setting its alpha channel to `0` at frame `0`.
-3. For each `.bflan` file, create properly named groups in the `RootGroup` section of `BtnNav_Root.bflyt`. **Don't forget to save all your edits.**
-4. Layout diff, compile and install, and there you go — you now have a working blinking cursor.
+1. Abre `Set.szs` y luego `BtnNav_Root_Active.bflan`. **Como siempre al crear animaciones personalizadas,** haz las modificaciones adecuadas en las secciones `Pat1` y `Pai1`. Agrega la entrada `N_BtnFocusKey` (panel de cursor) a la lista, crea una **entrada `FLVC`** (¡no `FLPA`!) justo debajo de ella, y luego otra entrada debajo de `FLVC`. Elegí configurar mis fotogramas clave como se muestra en las capturas de pantalla a continuación.
+2. También editaremos `BtnNav_Root_Inactive.bflan`, de lo contrario, navegar por las pestañas interrumpirá la animación del cursor y lo bloqueará en un fotograma determinado (el mismo comportamiento que en nuestra animación anterior de iconos de juego). Considerando eso, simplemente "restablecemos" el estado de `N_BtnFocusKey` (después de agregar este panel a la lista) estableciendo su canal alfa en `0` en el fotograma `0`.
+3. Para cada archivo `.bflan`, crea grupos con nombres adecuados en la sección `RootGroup` de `BtnNav_Root.bflyt`. **No olvides guardar todas tus ediciones.**
+4. Realiza una diferencia de diseño, compila e instala, ¡y listo! Ahora tienes un cursor parpadeante que funciona.
 
-| ![Settings (1)](tuto14.jpg "Settings (1)") | ![Settings (2)](tuto15.jpg "Settings (2)") |
-|--------------------------------------------|--------------------------------------------|
-| Adding `FLVC` entry (Active)               | Adding `FLVC` entry (Inactive)             |
+| ![Configuración (1)](tuto14.jpg "Configuración (1)") | ![Configuración (2)](tuto15.jpg "Configuración (2)") |
+|------------------------------------------------------|------------------------------------------------------|
+| Agregar entrada `FLVC` (Activo)                      | Agregar entrada `FLVC` (Inactivo)                    |
 
-## Animated backgrounds
+## Fondos animados
 
-Animated backgrounds have been in the trends lately (as of the time of writing). The truth is, there is some intricacy behind animated background themes, so **let's make it clear once and for all**.
+Los fondos animados han estado de moda últimamente (en el momento de escribir esto). La verdad es que hay cierta complejidad detrás de los temas de fondo animados, así que **aclaremos de una vez por todas**.
 
-**There is no *proper* nor easy known way to make animated backgrounds.** Switch Theme Injector only supports `.dds`
-and `.jpg` files.
-An alternative solution would be to animate the pane that contains your custom background image. That *indeed* works,
-and there are a few themes that already have achieved this out there. To do so, working with `ResidentMenu.szs`, you
-need to add `L_BgNml` to the pane list in `RdtBase_Enter.bflan` and make your edits to your convenience. However, this
-solution has its limitations:
+**No hay una manera *adecuada* ni fácil conocida de hacer fondos animados.** Switch Theme Injector solo admite archivos `.dds` y `.jpg`.
+Una solución alternativa sería animar el panel que contiene tu imagen de fondo personalizada. Eso *realmente* funciona, y hay algunos temas que ya lo han logrado. Para hacerlo, trabajando con `ResidentMenu.szs`, necesitas agregar `L_BgNml` a la lista de paneles en `RdtBase_Enter.bflan` y realizar tus ediciones según tu conveniencia. Sin embargo, esta solución tiene sus limitaciones:
 
-- `RdtBase_Enter.bflan` contains the home screen unlocking animation. Try to loop your animation using the `Flags` item
-  and maybe you can guess what will happen (boot loop, UI and sound glitches). The only thing you can do to sort of
-  reproduce a looping behavior is to duplicate your animation pattern all the way through an absurd amount of key
-  frames. [Zhi](https://themezer.net/creators/239384767785730048) actually did this in
-  his [Patterns theme](https://themezer.net/packs/Patterns.-58f) with a frame limit of 64000 (which makes it about 8
-  minutes). If you are interested in learning the whole process, you can read
-  through [his own documentation there](https://github.com/zzzribas/Patterns/wiki). As a side note, you might want to
-  stay tuned for Zhi's next releases because he comes up with quite some good ideas!
 
-- You're still stuck with a static background image since there is no support for animated images of any kind, nor for
-  video files
-- You could make a collage of frames in a single background (each corner a 360p image). This way you could use an animation to focus on different corners and make it look like your background has four frames. You could make it two frames by putting the images simply next to each other. You will probably have to reduce quality of each picture to ~480p. You will still have to rely on manually adding many frame entries.
-- You can make gradient animations by animating Top/Bottom Left/Right corner colors, and not use a background image. Still, manually repeating the frames is required.
-- On firmware versions 5.x and below you could very easily loop background animations, as the `loop` flag did not affect the 'enter' animation when coming from the lockscreen.
+- `RdtBase_Enter.bflan` contiene la animación de desbloqueo de la pantalla de inicio. Intenta hacer un bucle con tu animación usando el elemento `Flags` y tal vez puedas adivinar qué sucederá (inicio de bucle, fallas en la interfaz de usuario y en el sonido). Lo único que puedes hacer para reproducir de alguna manera un comportamiento en bucle es duplicar tu patrón de animación hasta llegar a una cantidad absurda de fotogramas clave. [Zhi](https://themezer.net/creators/239384767785730048) en realidad hizo esto en su [tema Patterns](https://themezer.net/packs/Patterns.-58f) con un límite de fotogramas de 64000 (lo que lo hace aproximadamente 8 minutos). Si estás interesado en aprender todo el proceso, puedes leer a través [de su propia documentación allí](https://github.com/zzzribas/Patterns/wiki). Como nota adicional, es posible que desees estar atento a los próximos lanzamientos de Zhi porque tiene algunas ideas bastante buenas.
 
-For the other applets (e.g. settings, user page, etc.), there is actually no known way at all to apply any kind of animation to a custom background image.
+- Todavía estás atascado con una imagen de fondo estática ya que no hay soporte para imágenes animadas de ningún tipo, ni para archivos de video.
+- Podrías hacer un collage de fotogramas en un fondo único (cada esquina una imagen de 360p). De esta manera podrías usar una animación para enfocar diferentes esquinas y hacer que parezca que tu fondo tiene cuatro fotogramas. Podrías reducir la calidad de cada imagen a ~480p. Aún tendrás que depender de agregar manualmente muchas entradas de fotogramas.
+- Puedes hacer animaciones de degradado animando los colores de las esquinas superior/inferior izquierda/derecha, y no usar una imagen de fondo. Aún así, se requiere repetir manualmente los fotogramas.
+- En las versiones del firmware 5.x y anteriores, podrías hacer bucles fácilmente con las animaciones de fondo, ya que la bandera `loop` no afectaba a la animación de 'entrada' al venir desde la pantalla de bloqueo.
 
-## Animations *may* overwrite things</a>
+Para otros applets (por ejemplo, configuración, página de usuario, etc.), en realidad no hay ninguna forma conocida de aplicar ningún tipo de animación a una imagen de fondo personalizada.
 
-If you spent some time editing `.json` layouts, you may have encountered cases where, no matter what you do, the
-changes you make to a pane (e.g. colors, position, etc.), even while having the `C_W` and `C_B` patches enabled, lead to
-no result. **In such cases, chances are that an animation is overwriting your edits.**
+## Las animaciones *pueden* sobrescribir cosas
 
-One notable case is the Redownload Software button at the bottom of the full launcher applet's main
-page (`Flauncher.szs`). The panes corresponding to this button are `L_Shop` and `T_Empty`, and these won't hide by
-simply attaching the `Visible: false` property to them. This is due to the `FLVI` entries in `FlcCntMain_Type.bflan`
-that overwrite any modification attempt made within your `.json` code. To sort this out, the `KeyFrames` values under each `FLVI` entry
-must be set to `0` (`1` by default).
+Si pasaste algún tiempo editando diseños `.json`, es posible que hayas encontrado casos en los que, no importa lo que hagas, los cambios que realices en un panel (por ejemplo, colores, posición, etc.), incluso teniendo habilitados los parches `C_W` y `C_B`, no den resultado. **En tales casos, es probable que una animación esté sobrescribiendo tus ediciones.**
+
+Un caso notable es el botón de Volver a descargar software en la parte inferior de la página principal del applet de lanzamiento completo (`Flauncher.szs`). Los paneles correspondientes a este botón son `L_Shop` y `T_Empty`, y estos no se ocultarán simplemente adjuntando la propiedad `Visible: false` a ellos. Esto se debe a las entradas `FLVI` en `FlcCntMain_Type.bflan` que sobrescriben cualquier intento de modificación realizado dentro de tu código `.json`. Para resolver esto, los valores `KeyFrames` bajo cada entrada `FLVI` deben establecerse en `0` (`1` de forma predeterminada).
+
 
 | ![Shop (1)](tuto16.jpg "Shop (1)") | ![Full launcher (2)](tuto17.jpg "Shop (2)") |
 |------------------------------------|---------------------------------------------|
@@ -108,8 +82,8 @@ must be set to `0` (`1` by default).
 
 | ![Full launcher (1)](flaunch1.jpg "Full launcher (1)") | ![Full launcher (2)](flaunch2.jpg "Full launcher (2)") |
 |--------------------------------------------------------|--------------------------------------------------------|
-| Visible Redownload Software button                     | Hidden Redownload Software button                      |
+| Botón Redescargar software visible                      | Botón Redescargar software oculto                      |
 
-Giving another example, take a look at my Unison R home menu theme: highlighted games have a white rounded card around their icon. These cards' corresponding pane is `P_BtnBase` from `RdtBtnIconGame.bflyt`. This pane actually has some transparency defined through animations by default. So in order to make this pane fully opaque, we need to look into the animations of `P_BtnBase` and change its `KeyFrames` value to `255` under the `FLVC` entry.
+Dando otro ejemplo, echa un vistazo a mi tema de menú de inicio Unison R: los juegos destacados tienen una tarjeta blanca redondeada alrededor de su icono. Los paneles correspondientes a estas tarjetas son `P_BtnBase` de `RdtBtnIconGame.bflyt`. Este panel en realidad tiene cierta transparencia definida a través de animaciones de forma predeterminada. Por lo tanto, para hacer que este panel sea completamente opaco, debemos analizar las animaciones de `P_BtnBase` y cambiar su valor de `KeyFrames` a `255` bajo la entrada `FLVC`.
 
-# [Continue to Animations: PaiTags and AnimationTargets](./paitags-and-targets.md) :octicons-arrow-right-16:
+# [Continuar con Animaciones: PaiTags y AnimationTargets](./paitags-and-targets.md) :octicons-arrow-right-16:
