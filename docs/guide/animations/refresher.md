@@ -1,89 +1,70 @@
-##### :octicons-arrow-left-16: [Back to Animations: introduction](index.md)
+##### :octicons-arrow-left-16: [Volver a Animaciones: introducción](index.md)
 
-# Animations: refresher course on files and diffing
+# Animaciones: repaso de archivos y diferenciación
 ---
 
-## Quick reminder on Nintendo Switch files
+## Recordatorio rápido sobre archivos de Nintendo Switch
 
 !!! info
-        For more details, see the following sections:
-        
-        - **[Menu files](../menu-files.md) :octicons-arrow-right-16:**
+    Para más detalles, consulta las siguientes secciones:
+    
+    - **[Archivos de menú](../menu-files.md) :octicons-arrow-right-16:**
+    
+    - **[Tipos de archivos](../filetypes.md) :octicons-arrow-right-16:**
 
-        - **[Filetypes](../filetypes.md) :octicons-arrow-right-16:**
+Hacer temas implica alterar archivos `.szs`. Estos son archivos que contienen los elementos gráficos de la interfaz de usuario, todos ellos almacenados en archivos `.bflyt` y `.bflan`. Básicamente, toda la interfaz de usuario se descompone en tales archivos. Entonces, para crear animaciones, obviamente tendremos que modificarlos.
 
-Making themes means altering `.szs` files. Those are archives that contain the UI's graphical assets, all of them being
-stored in `.bflyt` and `.bflan` files. Basically, the whole UI is broken down into such files. So in order to create
-animations, we'll obviously need to tamper them.
+Imágenes, iconos, texto y prácticamente todo lo que se muestra en la pantalla de tu consola son objetos de "pane" que están contenidos en archivos `.bflyt`. Estos archivos `.bflyt` también contienen información sobre la posición/tamaño/escala de los paneles y sus canales RGBA. En otras palabras, esos paneles son en lo que nos vamos a meter en este tutorial, **es decir, son precisamente los objetos en los que adjuntaremos nuestras animaciones.** Así que es posible que quieras **ver de antemano el** archivo `.bflyt` **que contiene el panel que deseas animar.**
 
-Pictures, icons, text, and pretty much everything displayed on your console screen are *pane* objects that are contained
-in `.bflyt` files. These `.bflyt` files also contain information on panes' position/size/scale and their RGBA channels.
-In other words, those panes are what we will mess around with in this tutorial, **i.e. they are precisely the objects on
-which we will attach our animations.** So you might want to **check beforehand the**  `.bflyt`  **file that contains the
-pane you want to animate.**
-
-In practice, **we'll essentially be focusing on**  `.bflan`  **files**, in which are stored parts of the animation data
-**for a specific**  `.bflyt`  **file**. Almost all the process is done through Switch Layout Editor which I'll start to
-introduce in the next subsection.
+En la práctica, **nos centraremos principalmente en los archivos** `.bflan`, **en los que se almacenan partes de los datos de animación** para un archivo `.bflyt` **específico**. Casi todo el proceso se realiza a través de Switch Layout Editor, que empezaré a presentar en la próxima subsección.
 
 ![bflyt vs bflans](bflytvsbflans.png "bflyt vs bflans")
 
-Getting back to `.szs` archives, you'll find those in `themes/systemData` on your SD card, these have already been
-extracted by the NXTheme Installer homebrew app. Please note that `.szs` files contain copyrighted stuff, making them
-illegal to share (that's the reason why modders implemented the `.nxtheme` format to get around this).
+Volviendo a los archivos `.szs`, los encontrarás en `themes/systemData` en tu tarjeta SD, estos ya han sido extraídos por la aplicación homebrew NXTheme Installer. Ten en cuenta que los archivos `.szs` contienen material con derechos de autor, lo que los hace ilegales para compartir (esa es la razón por la que los modders implementaron el formato `.nxtheme` para sortear esto).
 
-Each file corresponds to a specific menu,
+Cada archivo corresponde a un menú específico,
 
-| `.szs` file        | Menu                         |
-|:--------------------:|:------------------------------:|
-| `ResidentMenu.szs` | Home screen                  |
-| `Set.szs`          | Settings                     |
-| `Psl.szs`          | Player selection             |
-| `Flauncher.szs`    | All software / full launcher |
-| `Lock.szs`         | Lock screen                  |
-| `MyPage.szs`       | User page                    |
+| `.szs`         | Menú                        |
+|:--------------:|:---------------------------:|
+| `ResidentMenu.szs` | Pantalla de inicio        |
+| `Set.szs`         | Configuraciones            |
+| `Psl.szs`         | Selección de jugador       |
+| `Flauncher.szs`   | Todas las apps/ lanzador completo |
+| `Lock.szs`        | Pantalla de bloqueo        |
+| `MyPage.szs`      | Página de usuario          |
 
-so if one wants to edit UI elements on the home page, we would need to grab the `ResidentMenu.szs` file. Likewise, if we
-want to make edits to the all apps section, `Flauncher.szs` is the file we will be working with. You get the idea.
+así que si alguien quiere editar elementos de la interfaz de usuario en la página de inicio, necesitaríamos obtener el archivo `ResidentMenu.szs`. Del mismo modo, si queremos hacer ediciones en la sección de todas las aplicaciones, `Flauncher.szs` es el archivo con el que trabajaremos. Ya tienes la idea.
 
 !!! info
-      You will also find in `themes/systemData` other `.szs` files that aren't listed here, e.g. `Option.szs`. 
-      Those are not officially supported by the theme injector, but it is possible to manually edit them regardless. Check out LayoutDocs' [diffpatching section](../diffing.md).
+      También encontrarás en `themes/systemData` otros archivos `.szs` que no están listados aquí, por ejemplo, `Option.szs`.
+      Estos no son compatibles oficialmente con el inyector de temas, pero es posible editarlos manualmente de todos modos. Echa un vistazo a la sección de [diferenciación](../diffing.md) de LayoutDocs.
 
-## Diffing with Layout Editor
+## Diffing con Layout Editor
 
 !!! info
-        For more details, see the following section:
-        
-        - **[Diffing](../diffing.md) :octicons-arrow-right-16:**
+    Para más detalles, consulta la siguiente sección:
+    
+    - **[Diferenciación](../diffing.md) :octicons-arrow-right-16:**
 
-
-You should be used to messing around with `.json` files and compiling themes with Switch Theme Injector, but maybe
-you're not familiar with Switch Layout Editor. Think of it as a `.szs` reader/archiver that also offers an actual
-on-screen preview of the panes' positioning, which is quite convenient for layout editing. It turns out that Layout
-Editor is also used for animation editing.
+Es posible que estés acostumbrado a trastear con archivos `.json` y compilar temas con Switch Theme Injector, pero quizás no estés familiarizado con Switch Layout Editor. Piensa en él como un lector/archivador de archivos `.szs` que también ofrece una vista previa real en pantalla de la posición de los paneles, lo cual es bastante conveniente para la edición de diseños. Resulta que Layout Editor también se utiliza para la edición de animaciones.
 
 !!! tip
-      Alternatively, you can use Switch Toolbox (also included with [LayoutKit](https://github.com/ThemezerNX/LayoutKit)), which is another piece of software that has pretty much the same purposes as Layout Editor, at least for our current needs. However, since I've been working with Layout Editor, I won't be covering Switch Toolbox here, but at the end of the day it's up to your preference.
+      Alternativamente, puedes utilizar Switch Toolbox (también incluido con [LayoutKit](https://github.com/ThemezerNX/LayoutKit)), que es otro software que tiene prácticamente los mismos propósitos que Layout Editor, al menos para nuestras necesidades actuales. Sin embargo, dado que he estado trabajando con Layout Editor, no cubriré Switch Toolbox aquí, pero al final del día depende de tu preferencia.
 
-Once the animations have been implemented, we'll need to make a *layout diff* (as in *difference*). Basically, we want
-to work with two versions of the `.szs` file of interest: the first one stays untouched and the second one will contain
-all the edits that have been made through Layout Editor. Layout diffing is the process of comparing (*diffing*) both
-these `.szs` files and spitting out a `.json` layout that reflects all your edits. The output `.json` file can then be used in Switch Theme Injector to compile
-the `.nxtheme` as you would normally do.
+Una vez que se hayan implementado las animaciones, necesitaremos hacer una *diferencia de diseño* (como en *diferencia*). Básicamente, queremos trabajar con dos versiones del archivo `.szs` de interés: el primero se mantiene intacto y el segundo contendrá todas las ediciones que se hayan realizado a través de Layout Editor. La diferenciación de diseño es el proceso de comparar (*difuminar*) estos dos archivos `.szs` y generar un diseño `.json` que refleje todas tus ediciones. El archivo `.json` de salida luego se puede utilizar en Switch Theme Injector para compilar el `.nxtheme` como lo harías normalmente.
 
-## In summary
+## En resumen
 
-We'll go through these general steps that apply for **any type of animation editing**:
+Pasaremos por estos pasos generales que se aplican a **cualquier tipo de edición de animaciones**:
 
-- make two copies of the picked `.szs` file
+- hacer dos copias del archivo `.szs` seleccionado
 
-- edit one of them with our animations
+- editar uno de ellos con nuestras animaciones
 
-- layout diffing
+- diferenciación de diseño
 
-- compile the `.nxtheme` using the output/diffed `.json` and install onto the console (usual process with Switch Theme Injector and NXTheme Installer)
+- compilar el `.nxtheme` usando el archivo `.json` de salida/diferenciado e instalarlo en la consola (proceso habitual con Switch Theme Injector y NXTheme Installer)
 
-With all of that being introduced, we can finally start creating animations.
+Con todo esto presentado, finalmente podemos empezar a crear animaciones.
 
-# [Continue to Animations: Main tutorial](main-tutorial.md) :octicons-arrow-right-16:
+# [Continuar con Animaciones: Tutorial principal](main-tutorial.md) :octicons-arrow-right-16:
