@@ -1,34 +1,36 @@
-##### :octicons-arrow-left-16: [Back to Animations: PaiTags and AnimationTargets](./paitags-and-targets.md)
+##### :octicons-arrow-left-16: [Volver a Animaciones: PaiTags y AnimationTargets](./paitags-and-targets.md)
 
-# szs, bflyt, bflan files
+
+# Archivos szs, bflyt, bflan 
 ---
 
-Here is a non-exhaustive list of UI components that can be animated.
+Aquí tienes una lista no exhaustiva de componentes de la interfaz de usuario que pueden ser animados.
 
 ##### ResidentMenu.szs (home screen)
 
-| `.bflyt`             | UI element                 | Notable `.bflan` files                                                |
-|----------------------|----------------------------|-----------------------------------------------------------------------|
-| `RdtBase`            | entire home screen menu    | `RdtBase_Enter` (animation upon unlocking the console to home screen) |
-| `RdtBtnIconGame`     | game button                | `RdtBtnIconGame_Active`, `RdtBtnGame_Inactive`                        |
-| `RdtBtnFullLauncher` | all software applet button | `RdtBtnFullLauncher_Active`, `RdtBtnFullLauncher_Inactive`            |
-| `RdtBtnPvr`          | album applet button        | `RdtBtnPvr_Active`, `RdtBtnPvr_Inactive`                              |
-| `RdtBtnCtrl`         | controllers applet button  | `RdtBtnCtrl_Active`, `RdtBtnCtrl_Inactive`                            |
-| `RdtBtnSet`          | settings applet button     | `RdtBtnSet_Active`, `RdtBtnSet_Inactive`                              |
-| `RdtBtnPow`          | power button               | `RdtBtnPow_Active`, `RdtBtnPow_Inactive`                              |
-| `RdtBtnMyPage`       | user profile button        | `RdtBtnMyPage_Active`, `RdtBtnMyPage_Inactive`                        |
+| `.bflyt`             | Elemento de la interfaz de usuario | Archivos `.bflan` destacados                                             |
+|----------------------|-------------------------------------|--------------------------------------------------------------------------|
+| `RdtBase`            | menú completo de la pantalla de inicio | `RdtBase_Enter` (animación al desbloquear la consola en la pantalla de inicio) |
+| `RdtBtnIconGame`     | botón de juego                      | `RdtBtnIconGame_Active`, `RdtBtnGame_Inactive`                        |
+| `RdtBtnFullLauncher` | botón de todas las apps| `RdtBtnFullLauncher_Active`, `RdtBtnFullLauncher_Inactive`            |
+| `RdtBtnPvr`          | botón de  álbum         | `RdtBtnPvr_Active`, `RdtBtnPvr_Inactive`                              |
+| `RdtBtnCtrl`         | botón de  los controles | `RdtBtnCtrl_Active`, `RdtBtnCtrl_Inactive`                            |
+| `RdtBtnSet`          | botón de  ajustes       | `RdtBtnSet_Active`, `RdtBtnSet_Inactive`                              |
+| `RdtBtnPow`          | botón de encendido                   | `RdtBtnPow_Active`, `RdtBtnPow_Inactive`                              |
+| `RdtBtnMyPage`       | botón de perfil de usuario           | `RdtBtnMyPage_Active`, `RdtBtnMyPage_Inactive`                        |
 
-##### Set.szs (settings applet)
+##### Set.szs (applet de ajustes)
 
-| `.bflyt`      | UI element          | Notable `.bflan` files                       |
-|---------------|---------------------|----------------------------------------------|
-| `BtnNav_Root` | Navigation menu tab | `BtnNav_Root_Active`, `BtnNav_Root_Inactive` |
+| `.bflyt`      | Elemento de la interfaz de usuario | Archivos `.bflan` destacados                          |
+|---------------|------------------------------------|-------------------------------------------------------|
+| `BtnNav_Root` | Pestaña del menú de navegación     | `BtnNav_Root_Active`, `BtnNav_Root_Inactive`          |
 
-##### Flauncher.szs (all software applet)
+##### Flauncher.szs (applet de todas las aplicaciones)
 
-| `.bflyt`             | UI element                                                    | Notable `.bflan` files                                     |
-|----------------------|---------------------------------------------------------------|------------------------------------------------------------|
-| `FlcBtnIconGame`     | game icon in the main and group screens                       | `FlcBtnIconGame_Active`, `FlcBtnIconGame_Inactive`         |
-| `FlcBtnIconGameEdit` | game icon in the create group and add/remove software screens | `FlcBtnIconGameEdit_Active`, `FlcBtnIconGameEdit_Inactive` |
+| `.bflyt`             | Elemento de la interfaz de usuario                                               | Archivos `.bflan` destacados                              |
+|----------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------|
+| `FlcBtnIconGame`     | Icono del juego en las pantallas principales y de grupo                           | `FlcBtnIconGame_Active`, `FlcBtnIconGame_Inactive`         |
+| `FlcBtnIconGameEdit` | Icono del juego en las pantallas de crear grupo y agregar/eliminar software      | `FlcBtnIconGameEdit_Active`, `FlcBtnIconGameEdit_Inactive` |
 
-# [Continue to Diffing](../diffpatch/index.md) :octicons-arrow-right-16:
+# [Continuar con el diffpatch](../diffpatch/index.md) :octicons-arrow-right-16:
+
