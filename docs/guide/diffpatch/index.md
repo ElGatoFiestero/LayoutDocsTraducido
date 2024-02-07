@@ -1,20 +1,16 @@
-##### :octicons-arrow-left-16: [Back to Animations: szs, bflyt, bflan files](../animations/szs-bflyt-bflan.md)
+El diffing es el proceso de crear un archivo JSON
+con un conjunto de cambios entre el original y un SZS modificado.
 
-# Diffing
-
-Diffing is the process of making a JSON file
-with a set of changes between the original and a modified SZS
-
-This can be done with [Switch Theme injector](https://github.com/exelix11/SwitchThemeInjector)
+Esto se puede hacer con [Switch Theme injector](https://github.com/exelix11/SwitchThemeInjector).
 
 ![diffing.png](<diffing.png>)
 
-the output of a diffpatch may look like the example below:
+La salida de un parche diferencial puede parecerse al ejemplo siguiente:
 
 <font size="0">
 <pre><code>
 {
-	"PatchName": "Example DIFFPATCH",
+	"PatchName": "Ejemplo DIFFPATCH",
 	"AuthorName": "SodaSoba",
 	"TargetName": "ORIGINAL.szs",
 	"ID": "123456789",
@@ -50,8 +46,8 @@ the output of a diffpatch may look like the example below:
 }
 </code></pre>
 </font>
-this JSON (diffpatch) can be applied to a SZS file either with [Switch Theme injector](https://github.com/exelix11/SwitchThemeInjector) or with [LayoutKit](https://github.com/ThemezerNX/LayoutKit)
+Este JSON (diffpatch) se puede aplicar a un archivo SZS ya sea con [Switch Theme injector](https://github.com/exelix11/SwitchThemeInjector) o con [LayoutKit](https://github.com/ThemezerNX/LayoutKit).
 
-Here is an example by sodasoba on how a diffpatch can be applied:
+Aquí tienes un ejemplo de sodasoba sobre cómo aplicar un parche diferencial:
 
-# [Continue to Diffpatching](diff-example.md) :octicons-arrow-right-16:
+# [Continuar a Difusiones](diff-example.md) :octicons-arrow-right-16:
