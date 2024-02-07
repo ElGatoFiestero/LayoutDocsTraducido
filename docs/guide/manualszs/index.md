@@ -24,7 +24,7 @@ Es posible tematizar básicamente todos los menús que no son oficialmente compa
 
 Cada aplicación instalada en Switch es un título que tiene un ID único.
 
-`qlaunch` es el que contiene los applets del menú de inicio debajo de él. Algunos de estos son compatibles oficialmente con el inyector (por ejemplo, `ResidentMenu.szs`, `Flaunch.szs`, `Set.szs`, etc.), mientras que otros no lo son (por ejemplo, `Option.szs`). Estos archivos `.szs` ya han sido extraídos por la aplicación homebrew NXTheme Installer y deberían estar ubicados en `themes/systemData` en tu tarjeta SD, por lo que diferenciarlos es un proceso sencillo ya que no necesitas extraer manualmente estos archivos. No elaboraré esto aquí, sino que recomiendo revisar la [sección de parcheo diferencial](docs/guide/diffpatch/index.md).
+`qlaunch` es el que contiene los applets del menú de inicio debajo de él. Algunos de estos son compatibles oficialmente con el inyector (por ejemplo, `ResidentMenu.szs`, `Flaunch.szs`, `Set.szs`, etc.), mientras que otros no lo son (por ejemplo, `Option.szs`). Estos archivos `.szs` ya han sido extraídos por la aplicación homebrew NXTheme Installer y deberían estar ubicados en `themes/systemData` en tu tarjeta SD, por lo que diferenciarlos es un proceso sencillo ya que no necesitas extraer manualmente estos archivos. No elaboraré esto aquí, sino que recomiendo revisar la [sección de parcheo diferencial](/docs/guide/diffpatch/index.md).
 
 El ID de `qlaunch` es `0100000000001000`.
 
