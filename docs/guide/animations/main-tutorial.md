@@ -1,180 +1,160 @@
-##### :octicons-arrow-left-16: [Back to Animations: refresher course](refresher.md)
+##### :octicons-arrow-left-16: [Volver a Animaciones: curso de repaso](refresher.md)
 
-# Animations: Main tutorial
+# Animaciones: Tutorial principal
 ---
 
-## Our goal
+## Nuestro objetivo
 
-From now on, I'll only focus on creating an animation for the game icons on the home screen. **I want those icons to
-scale up when they are being selected, and to scale down to their initial size when the cursor goes off. This will be
-our goal throughout this tutorial section.** As I mentioned in the introduction section, tables will be provided later
-on if you want to experiment further and make more exotic animations.
+A partir de ahora, me centraré únicamente en crear una animación para los iconos de los juegos en la pantalla de inicio. **Quiero que esos iconos se escalen cuando se seleccionan y que se escalen a su tamaño inicial cuando el cursor se aleja. Este será nuestro objetivo en toda esta sección del tutorial.** Como mencioné en la sección de introducción, más adelante se proporcionarán tablas si quieres experimentar más y hacer animaciones más exóticas.
 
-## Organizing our workflow
+## Organización de nuestro flujo de trabajo
 
-To keep track on what we are doing, we'll first properly set up our workspace. Here I suggest a directory hierarchy that
-makes my own workflow efficient enough, but you can do as you please as you get the hang of knowing what you're doing.
+Para hacer un seguimiento de lo que estamos haciendo, primero configuraremos correctamente nuestro espacio de trabajo. Aquí sugiero una jerarquía de directorios que hace que mi propio flujo de trabajo sea lo suficientemente eficiente, pero puedes hacer lo que quieras a medida que te acostumbres a saber lo que estás haciendo.
 
 **1-**
 
-Create a directory on your desktop and name it `animEdit`.
+Crea un directorio en tu escritorio y llámalo `animEdit`.
 
 **2-**
 
-Go in `themes/systemData` on your Switch's SD card. Since I'm interested in editing the home screen for this example, I'll only grab `ResidentMenu.szs`.
+Ve a `themes/systemData` en la tarjeta SD de tu Switch. Como estoy interesado en editar la pantalla de inicio para este ejemplo, solo tomaré `ResidentMenu.szs`.
 
 **3-**
 
-Copy `ResidentMenu.szs`, paste it on your desktop and in `Desktop/animEdit`.
+Copia `ResidentMenu.szs`, pégalo en tu escritorio y en `Escritorio/animEdit`.
 
-| ![Desktop](hierarchy1.jpg "Desktop/") | ![Desktop](hierarchy2.jpg "Desktop/animEdit") |
+| ![Desktop](hierarchy1.jpg "Escritorio/") | ![Desktop](hierarchy2.jpg "Escritorio/animEdit") |
 |---------------------------------------|-----------------------------------------------|
-| `Desktop/`                            | `Desktop/animEdit`                            |
+| `Escritorio/`                            | `Escritorio/animEdit`                            |
 
-Remember, we'll need one vanilla `.szs` and one copy of it that we'll edit, so we can diff them at the end. Here the
-desktop one will remain vanilla, so we will edit the one in `Desktop/animEdit`.
+Recuerda, necesitaremos un `.szs` vainilla y una copia de él que editaremos, para que podamos diferenciarlos al final. Aquí, el de escritorio permanecerá vainilla, así que editaremos el que está en `Escritorio/animEdit`.
 
-## Animation creation process
+
+## Proceso de creación de la animación
 
 **4-**
 
-Open Layout Editor and load up `animEdit/ResidentMenu.szs`. You can simply drag and drop the file onto the window. A little box will open listing all the files contained in the `.szs` archive.
+Abre Layout Editor y carga `animEdit/ResidentMenu.szs`. Simplemente arrastra y suelta el archivo en la ventana. Se abrirá una pequeña ventana que lista todos los archivos contenidos en el archivo `.szs`.
 
 **5-**
 
-First, we will create the scaling up animation when the game icon is **selected**. In the box window, search for `RdtBtnIconGame_Active.bflan` and open by double clicking. A new window will show up. On this window, expand all the items by clicking the `+` icons.
+Primero, crearemos la animación de escalado hacia arriba cuando el icono del juego está **seleccionado**. En la ventana de la caja, busca `RdtBtnIconGame_Active.bflan` y ábrelo haciendo doble clic. Se abrirá una nueva ventana. En esta ventana, expande todos los elementos haciendo clic en los iconos `+`.
 
 ![](tuto1.jpg)
 
-On the left are listed *some* panes contained in `RdtBtnIconGame.bflyt` (actually only one in this case,
-namely `P_InnerCursor`). Depending on what we want to achieve, we'll likely need to add more panes to this list. That
-will be the case here for our example.
+A la izquierda se enumeran *algunos* paneles contenidos en `RdtBtnIconGame.bflyt` (en realidad, solo uno en este caso, que es `P_InnerCursor`). Dependiendo de lo que queramos lograr, probablemente necesitaremos agregar más paneles a esta lista. Ese será el caso aquí para nuestro ejemplo.
 
-On the right are displayed items that are used to define the animation behavior. Don't worry, we'll only need to edit a
-few of them.
+A la derecha se muestran elementos que se utilizan para definir el comportamiento de la animación. No te preocupes, solo necesitaremos editar algunos de ellos.
 
-Now I apologize in advance, but you'll need to blindly follow my instructions... for now. I will elaborate some of them
-throughout this section.
+Ahora, me disculpo de antemano, pero necesitarás seguir mis instrucciones a ciegas... por ahora. Explicaré algunas de ellas a lo largo de esta sección.
 
 **6-**
 
-In the left panel, click on the first entry, `Pat1 section`. Then on the right panel,
+En el panel izquierdo, haz clic en la primera entrada, `Sección Pat1`. Luego, en el panel derecho,
 
-- Set `AnimationBinding` to `0`
+- Configura `AnimationBinding` en `0`
 
-- Expand the `Groups` entry by clicking on the left arrow, and set the `[0]` field to `custom_G_Active` (the value isn't relevant here so this actually can be anything).
+- Expande la entrada `Groups` haciendo clic en la flecha izquierda y establece el campo `[0]` en `custom_G_Active` (el valor no es relevante aquí, así que en realidad puede ser cualquier cosa).
 
-- In the left panel, click on the second entry, `Pai1 section` and set the `FrameSize` to `9999`.
+- En el panel izquierdo, haz clic en la segunda entrada, `Sección Pai1` y establece el `FrameSize` en `9999`.
 
 !!! warning
-      This 6th step is a recurring setup that always needs to be done in order to create **any kind of animation**, regardless of our current goal.
+      Este 6º paso es una configuración recurrente que siempre debe realizarse para crear **cualquier tipo de animación**, independientemente de nuestro objetivo actual.
 
-If you've done everything correctly, this should look like this.
+Si has hecho todo correctamente, debería verse así.
 
-| ![Pat1 section](tuto2.jpg "Pat1 section") | ![Pai1 section](tuto3.jpg "Pai1 section") |
+| ![Sección Pat1](tuto2.jpg "Sección Pat1") | ![Sección Pai1](tuto3.jpg "Sección Pai1") |
 |-------------------------------------------|-------------------------------------------|
-| `Pat1 section`                            | `Pai1 section`                            |
+| `Sección Pat1`                            | `Sección Pai1`                            |
 
       
-Now about creating our actual animation, we will do so by editing the `N_Root` pane from `RdtBtnIconGame.bflyt`, which means adding an entry to the pane list.
+Ahora, sobre la creación de nuestra animación real, lo haremos editando el panel `N_Root` de `RdtBtnIconGame.bflyt`, lo que significa agregar una entrada a la lista de paneles.
+
 
 !!! tip
-      If you are familiar with theming, `N_Root` is the pane that basically contains all the others within the `.bflyt`. Thus here we won't bother and we will animate the whole thing (including text, cursor, etc.). But you can be more specific and animate, for example, only the game title text. In this very case, you would add the `L_Balloon` entry instead.
+      Si estás familiarizado con el tema de los temas, `N_Root` es el panel que básicamente contiene todos los demás dentro del archivo `.bflyt`. Por lo tanto, aquí no nos molestaremos y animaremos todo (incluido el texto, el cursor, etc.). Pero puedes ser más específico y animar, por ejemplo, solo el texto del título del juego. En este caso particular, agregarías la entrada `L_Balloon` en su lugar.
 
 **7-**
 
-To add the `N_Root` pane to the list, left click AND THEN right click on the `Pai1 section` (otherwise
-   you'll encounter unexpected behavior). Select the `Add Entry` option. The left panel should update with the newly
-   added item at the end of the list. Click on it and rename it as `N_Root` in the right panel.
+Para agregar el panel `N_Root` a la lista, haz clic izquierdo Y LUEGO clic derecho en la sección `Pai1` (de lo contrario, te encontrarás con un comportamiento inesperado). Selecciona la opción `Add Entry`. El panel izquierdo debería actualizarse con el nuevo elemento agregado al final de la lista. Haz clic en él y renómbralo como `N_Root` en el panel derecho.
 
 | ![Adding a pane (1)](tuto4.jpg "Adding a pane (1)") | ![Adding a pane (2)](tuto5.jpg "Adding a pane (2)") |
 |-----------------------------------------------------|-----------------------------------------------------|
-| Adding a pane (1)                                   | Adding a pane (2)                                   |
+| Añadiendo un panel (1)                               | Añadiendo un panel (2)                               |
 
 **8-**
 
-Right click on `N_Root` in the pane list and select `Add Entry`. Expand the `N_Root` pane and rename the `PaiTag`
-   entry as `FLPA`. Then again, add *2 sub-entries* to the `FLPA` entry.
+Haz clic derecho en `N_Root` en la lista de paneles y selecciona `Add Entry`. Expande el panel `N_Root` y renombra la entrada `PaiTag` como `FLPA`. Luego, nuevamente, agrega *2 sub-entradas* a la entrada `FLPA`.
 
-Now, the following steps will define the scaling up animation we want to achieve.
+Ahora, los siguientes pasos definirán la animación de escalado que queremos lograr.
 
 **9-**
 
-Under `FLPA`, select the first `[Entry]`. The right panel will display another set of values. Some of them will actually matter, so please take note of these,
+Bajo `FLPA`, selecciona el primer `[Entry]`. El panel derecho mostrará otro conjunto de valores. Algunos de ellos realmente importarán, así que ten en cuenta estos,
 
-- `AnimationTarget` is the type of animation we choose to assign to our pane. This is basically here that we tell the pane to either scale up or down, translate along the x-axis or y-axis, or rotate around the z-axis clockwise/counterclockwise. Later on, this is where you might be interested in checking the tables to test the values associated to other types of animations.
+- `AnimationTarget` es el tipo de animación que elegimos asignar a nuestro panel. Básicamente, aquí es donde le decimos al panel que se escale hacia arriba o hacia abajo, se traduzca a lo largo del eje x o del eje y, o rote alrededor del eje z en el sentido de las agujas del reloj o en sentido contrario. Más adelante, aquí es donde podrías estar interesado en consultar las tablas para probar los valores asociados con otros tipos de animaciones.
 
-- `KeyFrames` is... self-explanatory, I guess. This allows us to break our animation down into properly defined key frames.
+- `KeyFrames` es... autoexplicativo, supongo. Esto nos permite desglosar nuestra animación en key frames correctamente definidos.
     
-- `DataType` refers to the type of our inputs in the `KeyFrames` field. **Just keep in mind that it should always be set to `2`** (meaning `float`). Although it's not really relevant here, you can follow [this link](https://layoutdocs.themezer.net/guide/layouts/usd-sections/) if you want to know a little more.
+- `DataType` se refiere al tipo de nuestras entradas en el campo `KeyFrames`. **Solo ten en cuenta que siempre debe establecerse en `2`** (significa `float`). Aunque no es realmente relevante aquí, puedes seguir [este enlace](https://layoutdocs.themezer.net/guide/layouts/usd-sections/) si quieres saber un poco más.
 
 **10-**
 
-We will define our values as,
+Definiremos nuestros valores de la siguiente manera,
 
 - `AnimationTarget` = `6`
 
 - `DataType` = `2`
 
-Leave the rest unchanged. Value `6` for `AnimationTarget` means *"scale along the x-axis"* (horizontally).
+Deja el resto sin cambios. El valor `6` para `AnimationTarget` significa *"escalar a lo largo del eje x"* (horizontalmente).
 
 ![AnimationTarget and DataType](tuto7.jpg "AnimationTarget and DataType")
 
 **11-**
 
-Select the `KeyFrames` item and click on the dots button that shows up. A new window will pop up in which we can add our key frames using the `Add` / `Remove` buttons at the bottom. Do as shown below.
+Selecciona el elemento `KeyFrames` y haz clic en el botón de puntos que aparece. Se abrirá una nueva ventana en la que podemos agregar nuestros key frames usando los botones `Add` / `Remove` en la parte inferior. Hazlo como se muestra a continuación.
 
 ![KeyFrames (Active)](tuto6.jpg "KeyFrames (Active)")
 
-This is how you should read this: at frame `0`, value is `1`, meaning that at the initial frame, the `N_Root` pane will
-keep its base ratio **along its horizontal axis**. Then, **up until frame `8`**, the pane will *progressively* scale up
-until reaching a `1.4` factor.
+Así es como deberías leer esto: en el fotograma `0`, el valor es `1`, lo que significa que en el fotograma inicial, el panel `N_Root` mantendrá su proporción base **a lo largo de su eje horizontal**. Luego, **hasta el fotograma `8`**, el panel se escalará *progresivamente* hasta alcanzar un factor `1.4`.
 
 !!! tip
-      Note that we defined earlier the `FrameSize` to be `9999` in the `Pai1 section`. We're good as long as this value is superior to the `Keyframe` maximum value, which is `8` here.
+      Ten en cuenta que definimos anteriormente el `FrameSize` en `9999` en la sección `Pai1`. Estamos bien siempre que este valor sea superior al valor máximo de `Keyframe`, que es `8` aquí.
+      
 
-!!! cite "Blend value"
-      `Blend` refers to the function's slope (as in math function) that guides the animation. In layman's terms, it conditions the pace at which a pane will travel from one frame to another. Since `Blend` values aren't documented and hard to figure out, I won't bother at all about them. I personally always set this value to `0`, which seems to represent a linear function, but feel free to experiment (and perhaps contribute to this guide).
+!!! cite "Valor de mezcla"
+      `Blend` se refiere a la pendiente de la función (como en función matemática) que guía la animación. En términos simples, condiciona el ritmo al que un panel viajará de un fotograma a otro. Dado que los valores de `Blend` no están documentados y son difíciles de entender, no me molestaré en absoluto por ellos. Personalmente, siempre establezco este valor en `0`, lo que parece representar una función lineal, pero siéntete libre de experimentar (y tal vez contribuir a esta guía).
 
 **12-**
 
-Repeat the 9th, 10th and 11th steps to the second `[Entry]` under `FLPA`, but the `AnimationTarget` value should be `7` here instead of `6`, meaning *"scale along the y-axis"* (vertically).
+Repite los pasos 9, 10 y 11 para el segundo `[Entry]` bajo `FLPA`, pero el valor de `AnimationTarget` debería ser `7` aquí en lugar de `6`, lo que significa *"escalar a lo largo del eje y"* (verticalmente).
 
-
-
-Now with all of these steps, we successfully made a scaling up animation when the game icon is **selected**. But what
-about when the icon is **being unselected**? Well, Switch's UI also offers us the possibility to tamper with that. If
-not done, the icon will actually keep its `1.4` factor **even after being unhovered**. So if we want to get things done
-properly, what follows is pretty much a mandatory thing to do. So, back to square one,
-
+Ahora, con todos estos pasos, hemos creado con éxito una animación de escalado cuando el ícono del juego está **seleccionado**. Pero ¿qué pasa cuando el ícono está **deseleccionado**? Bueno, la interfaz de usuario de Switch también nos ofrece la posibilidad de manipular eso. Si no se hace, el ícono realmente mantendrá su factor de `1.4` **incluso después de ser deseleccionado**. Entonces, si queremos hacer las cosas correctamente, lo que sigue es casi obligatorio. Así que, de vuelta al punto de partida,
 
 **13-**
 
-Go back to the little box window that lists the `.szs` content and search for `RdtBtnIconGame_Inactive.bflan`. Open this file and repeat all the steps above starting from step 6. **At step 6.b., change the `[0]` value to `custom_G_Inactive`** (it doesn't actually matter but it's for convenience). For the animation, we will do things the other way around, so step 12 should look like this.
+Vuelve a la pequeña ventana que lista el contenido del archivo `.szs` y busca `RdtBtnIconGame_Inactive.bflan`. Abre este archivo y repite todos los pasos anteriores a partir del paso 6. **En el paso 6.b., cambia el valor `[0]` a `custom_G_Inactive`** (en realidad no importa, pero es por conveniencia). Para la animación, haremos las cosas al revés, por lo que el paso 12 debería verse así.
 
 ![KeyFrames (Inactive)](tuto8.jpg "KeyFrames (Inactive)")
 
-This way, the game icon will scale down to its initial size when being unselected.
+De esta manera, el ícono del juego se reducirá a su tamaño inicial cuando se deseleccione.
 
-Now, there is a last thing we must do before diffing, **adding groups**. More precisely, adding groups to
-the `RdtBtnIconGame.bflyt` file in this case. This is necessary to 1) prevent crashes that will very likely happen
-without doing so, and 2) order the `.bflyt` to not follow its vanilla animation. Basically, we need to create a group for each `.bflan` we tampered with,
-namely `RdtBtnIconGame_Active.bflan` and `RdtBtnIconGame_Inactive.bflan`.
+Ahora, hay una última cosa que debemos hacer antes de diferenciar, **agregar grupos**. Más precisamente, agregar grupos al archivo `RdtBtnIconGame.bflyt` en este caso. Esto es necesario para 1) evitar bloqueos que probablemente ocurran sin hacerlo, y 2) ordenar al `.bflyt` que no siga su animación original. Básicamente, necesitamos crear un grupo para cada `.bflan` que hayamos modificado, es decir, `RdtBtnIconGame_Active.bflan` y `RdtBtnIconGame_Inactive.bflan`.
 
 **14-**
 
-Go back to the `.szs` box window and open up `RdtBtnIconGame.bflyt`. Don't mind the gray area on the right, just add a new group as shown in the image below, and make sure to **rename it the same name as we defined in step 6** (i.e. `custom_G_Active`). Then select the `Panes` item in the rectangle area below the list and type the panes listed in the `RdtBtnIconGame_Active.bflan` file. Each pane must be separated by a line break.
+Vuelve a la ventana de la caja `.szs` y abre `RdtBtnIconGame.bflyt`. No te preocupes por el área gris a la derecha, simplemente agrega un nuevo grupo como se muestra en la imagen a continuación, y asegúrate de **renombrarlo con el mismo nombre que definimos en el paso 6** (es decir, `custom_G_Active`). Luego, selecciona el elemento `Panes` en el área rectangular debajo de la lista y escribe los paneles enumerados en el archivo `RdtBtnIconGame_Active.bflan`. Cada panel debe estar separado por un salto de línea.
 
-| ![Groups (1)](tuto9.jpg "Groups (1)") | ![Groups (2)](tuto10.jpg "Groups (2)") |
+| ![Grupos (1)](tuto9.jpg "Grupos (1)") | ![Grupos (2)](tuto10.jpg "Grupos (2)") |
 |---------------------------------------|----------------------------------------|
-| Adding a group                        | Enumerating panes in the group         |
+| Agregando un grupo                    | Enumerando paneles en el grupo         |
 
 **15-**
 
-Repeat the operation for `RdtBtnIconGame_Inactive.bflan`. Same process except the group needs to be called `custom_G_Inactive`.
+Repite la operación para `RdtBtnIconGame_Inactive.bflan`. El mismo proceso excepto que el grupo debe llamarse `custom_G_Inactive`.
 
-And with this, we are mostly done. Now is finally the time for diffing. **Make sure to save the edits in all the opened
-windows.**
+Y con esto, casi hemos terminado. Ahora finalmente es el momento de diferenciar. **Asegúrate de guardar las ediciones en todas las ventanas abiertas.**
+
 
 **16-**
 
