@@ -1,3 +1,3 @@
-# Changing the Size of Components
+# CAmbiando el tamaño de los componentes
 
 _TODO_
