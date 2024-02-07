@@ -1,21 +1,22 @@
-# Disabling Hud Movement Caused by Battery
+# Deshabilitar el Movimiento del HUD Causado por la Batería
 
-![Preview](preview.jpg)
+![Vista previa](preview.jpg)
 
 ---
 
-Some layouts separate the clock from other hud elements (for example [Doge Layout](https://themezer.net/layouts/homemenu/Doge-Layout-e)).
-By default, the position of the clock changes depending on the battery percentage.
-These are the default padding values between the network indicator and the battery icon:
+Algunos diseños separan el reloj de otros elementos del HUD (por ejemplo, [Doge Layout](https://themezer.net/layouts/homemenu/Doge-Layout-e)).
+Por defecto, la posición del reloj cambia dependiendo del porcentaje de batería.
+Estos son los valores de relleno predeterminados entre el indicador de red y el icono de batería:
 
-![Keyframes](keyframes.png)
+![Fotogramas clave](keyframes.png)
 
--   `0` (px): battery percentage disabled
--   `32` (px): battery is ≤9%
--   `48` (px): battery is ≥10% and ≤99%
--   `64` (px): battery is 100%
+-   `0` (px): porcentaje de batería deshabilitado
+-   `32` (px): la batería es ≤9%
+-   `48` (px): la batería es ≥10% y ≤99%
+-   `64` (px): la batería es 100%
 
-## Example Code
+## Código de Ejemplo
+
 
 ```json
 {
