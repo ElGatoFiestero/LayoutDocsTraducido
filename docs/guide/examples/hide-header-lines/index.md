@@ -3,9 +3,10 @@ _[The Line Remover™](https://discord.com/channels/490398602250682368/495894801
 
 ---
 
-## Example Code
+## Código de Ejemplo
 
-This works for All Apps, Settings, Player Selection, User Page, and News.
+Esto funciona para todas las aplicaciones, configuraciones, selección de jugadores, página de usuario y noticias.
+
 
 ```json
 {
