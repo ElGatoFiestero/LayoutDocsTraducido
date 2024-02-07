@@ -1,74 +1,70 @@
-##### :octicons-arrow-left-16: [Back to What is Diffing](index.md)
-
 # Diffpatching
 
-This guide is an example of Diffpatching using a pre made json (diffpatch).<br> 
-it was made by sodasoba to patch Option.szs to make it match his switchdeck theme.
+Esta guía es un ejemplo de Difusión usando un json pre hecho (diffpatch).<br> 
+fue hecho por sodasoba para parchear Option.szs para que coincida con su tema switchdeck.
 
-Option.szs has to be manually patched as it's not supported by NXThemesInstaller but can be patched in [switchlayouteditor](https://github.com/FuryBaguette/SwitchLayoutEditor/releases) the patched file is then copied to `SDMC:/atmosphere/contents/0100000001000/romfs/lyt` with the other szs files
+Option.szs tiene que ser parcheado manualmente ya que no es compatible con NXThemesInstaller pero puede ser parcheado en [switchlayouteditor](https://github.com/FuryBaguette/SwitchLayoutEditor/releases) el archivo parcheado se copia entonces a `SDMC:/atmosphere/contents/0100000001000/romfs/lyt` con los otros archivos szs
 
-!!! cite "patched SZS locations:"
-	Refer to [Menu Files](../menu-files.md) page for szs and their locations within `atmosphere/contents/<TITLEID>/romfs/lyt`
+!!! cite "Ubicaciones de los SZS parcheados:"
+    Consulta la página de [Archivos de menú](../menu-files.md) para los szs y sus ubicaciones dentro de `atmosphere/contents/<TITLEID>/romfs/lyt`
 
-Without the patch applied this is the unedited SZS
+Sin el parche aplicado este es el SZS sin editar
 ![unpatched](<00opt.jpg>)
 
-similar to the example on the [diffing](index.md) page this diffpatch has settings that will change:
+similar al ejemplo en la página de [difusión](index.md) este difpatch tiene configuraciones que cambiarán:
 
- * _`option.szs/blyt/Line_Root.bflyt` - Removed_
- * _`option.szs/blyt/OptMain.bflyt` - Background color theme matched & icon resized_
- * _`option.szs/blyt/BgPlate.bflyt` - Background color_
- * _`option.szs/blyt/OptNav.bflyt` - Moved down_
- * _`option.szs/blyt/LineHeader_Root.bflyt` Removed_
- * _`option.szs/blyt/BgNav_Root.bflyt` - Background color / darker_
+ * _`option.szs/blyt/Line_Root.bflyt` - Eliminado_
+ * _`option.szs/blyt/OptMain.bflyt` - Tema de color de fondo coincidente y tamaño de icono modificado_
+ * _`option.szs/blyt/BgPlate.bflyt` - Color de fondo_
+ * _`option.szs/blyt/OptNav.bflyt` - Movido hacia abajo_
+ * _`option.szs/blyt/LineHeader_Root.bflyt` - Eliminado_
+ * _`option.szs/blyt/BgNav_Root.bflyt` - Color de fondo / más oscuro_
 
-after the diffpatch is applied the Option.szs will now look like this
+
+Después de que se aplique el difpatch, el Option.szs ahora se verá así
 ![patched](<01opt.png>)
 
-NXThemesInstaller extracts szs files on your switch SD card to the location: `SDMC:/themes/systemData/` Locate your version of _Option.szs_
+NXThemesInstaller extrae los archivos szs en la tarjeta SD de tu Switch a la ubicación: `SDMC:/themes/systemData/`. Ubica tu versión de _Option.szs_
 
 ![SDMC](<01-sdmc.png>)
 
-Make a copy of Option.szs to your computer then download and extract the diffpatch
+Haz una copia de Option.szs en tu computadora y luego descarga y extrae el diffpatch
 
 [Option-diffpatch-for-switchdeck.zip](Option-diffpatch-for-switchdeck.zip)
 
-Open switchlayouteditor and open option.szs or drag option.szs into the switchlayouteditor
+Abre switchlayouteditor y abre option.szs o arrastra option.szs al switchlayouteditor
 
 ![loadszs](<04-load-option.png>)
 
+Una vez que option.szs esté abierto, se abrirá una ventana más pequeña, solo necesitamos cargar nuestro diffpatch y no editar nada en este ejemplo, pero podrías cargar un diffpatch y usarlo como punto de partida para la temática.
 
-once option.szs is open a smaller window will open, we only need to load our diffpatch and not actually edit anything in this example but you could load a diffpatch and use it as a base point for themeing.
-
-Click `Tools` > `Load JSON patch`
+Haz clic en `Herramientas` > `Cargar parche JSON`
 
 ![unpatched](<05-load-diff-switchdeck.png>)
 
-
-locate the diffpatch you want to apply on your computer and open it
+Localiza el diffpatch que deseas aplicar en tu computadora y ábrelo
 
 ![unpatched](<6-open-diff-switchdeck.png>)
 
-once it's loaded you will get a pop up stating it's loaded
+Una vez que esté cargado, aparecerá un mensaje emergente indicando que se ha cargado
 
 ![unpatched](<7-loaded-diff-switchdeck.png>)
 
-now save the patched option.szs
+Ahora guarda el Option.szs parcheado
 
-by clicking `Save` > `Save`
+haciendo clic en `Guardar` > `Guardar`
 
 ![unpatched](<8-loaded-diff-switchdeck.png>)
 
-
-paste the patched option.szs from your desktop onto the SD card
+Pega el Option.szs parcheado desde tu escritorio en la tarjeta SD
 
 `SDMC:/atmosphere/contents/010000000001000/romfs/lyt/`
 
 ![unpatched](<9-loaded-diff-switchdeck.png>)
 
-!!! cite "patched SZS locations:"
-	Refer to [Menu Files](../menu-files.md) page for szs and their locations within `atmosphere/contents/<TITLEID>/romfs/lyt`
+!!! cite "Ubicaciones de los SZS parcheados:"
+	Consulta la página de [Archivos de menú](../menu-files.md) para los szs y sus ubicaciones dentro de `atmosphere/contents/<TITLEID>/romfs/lyt`
 	
-Reboot your switch and that's it.
+Reinicia tu Switch y listo.
 
-# [Continue to Manual szs theming](../manualszs/index.md) :octicons-arrow-right-16:
+# [Continúa con Tematización manual de SZS](../manualszs/index.md) :octicons-arrow-right-16:
