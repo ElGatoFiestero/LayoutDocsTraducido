@@ -3,7 +3,7 @@ _[Vanilla-ish Two Row Layout](https://themezer.net/layouts/homemenu/Vanilla-ish-
 
 ---
 
-## Example Code
+## Código de Ejemplo
 
 ```json
 {
