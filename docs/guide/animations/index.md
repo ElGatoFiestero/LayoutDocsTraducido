@@ -1,92 +1,77 @@
-##### :octicons-arrow-left-16: [Back to Filetypes](../filetypes.md)
+##### :octicons-arrow-left-16: [Volver a Tipos de Archivo](../filetypes.md)
 
-# Creating custom animations for your NX themes
-_Written by [Capybara](https://themezer.net/creators/382997176307154945), revisioned by Migush. Last updated: June 2023_
+# Creando animaciones personalizadas para tus temas de NX
+_Escrito por [Capybara](https://themezer.net/creators/382997176307154945), revisado por Migush. Última actualización: junio de 2023_
 
 ---
 
 !!! info
-      While this guide provides a fair amount of information about animations, there is always room for additional resource as things still aren't fully documented. Feel free to contribute either by [submitting a pull request on github](https://github.com/ThemezerNX/LayoutDocs) or by simply reaching out to the [Themezer Discord](https://discord.com/invite/nnm8wyM).
+      Aunque esta guía proporciona una cantidad razonable de información sobre animaciones, siempre hay espacio para recursos adicionales ya que las cosas aún no están completamente documentadas. Siéntete libre de contribuir ya sea [enviando una solicitud de extracción en GitHub](https://github.com/ThemezerNX/LayoutDocs) o simplemente comunicándote con el [Discord de Themezer](https://discord.com/invite/nnm8wyM).
 
-## Introduction
+## Introducción
 
-In this tutorial, we'll see how to implement custom animations to NX themes. This isn't a trivial topic and I expect you
-to have minimum knowledge on how the console's UI is organized, how layouts work and how to use Switch Theme Injector.
-All the basics should be covered in LayoutDocs' previous sections.
+En este tutorial, veremos cómo implementar animaciones personalizadas para temas de NX. Este no es un tema trivial y espero que tengas conocimientos mínimos sobre cómo está organizada la interfaz de usuario de la consola, cómo funcionan los diseños y cómo usar Switch Theme Injector. Todos los conceptos básicos deberían estar cubiertos en las secciones anteriores de LayoutDocs.
 
-We can distinguish two "main" types of animations:
+Podemos distinguir dos tipos "principales" de animaciones:
 
-- Animations made using the **3 basic transformations: translation (linear displacement), scaling and rotation**. It
-sounds rather minimalistic but, in fact, you achieve pretty much anything with these, in the end it's up to your own
-creativity.
-- Color based animations, which also include transparency.
+- Animaciones realizadas utilizando las **3 transformaciones básicas: traslación (desplazamiento lineal), escalado y rotación**. Suena bastante minimalista, pero de hecho, puedes lograr prácticamente cualquier cosa con estas, al final depende de tu propia creatividad.
+- Animaciones basadas en color, que también incluyen transparencia.
 
-There are some more types but for the sake of pedagogy, I'll elaborate on the animation creation process by going through one easy example. In case
-you want to expand your possibilities, additional documentation and tables with the values you'll be needing will be provided later on in this
-tutorial, so you can try them out by yourself.
+Hay algunos tipos más, pero por razones pedagógicas, elaboraré sobre el proceso de creación de animaciones pasando por un ejemplo fácil. En caso de que quieras ampliar tus posibilidades, más adelante en este tutorial se proporcionará documentación adicional y tablas con los valores que necesitarás, para que puedas probarlos por ti mismo.
 
-You can have a glance at [my Themezer profile](https://themezer.net/creators/382997176307154945) for examples. If you
-want to witness theming at its maximum potential, you might want to
-check [NSX's work](https://www.youtube.com/channel/UCtvgkpsXAGp0P3dJr6buxRg) out. Most of his themes still work on
-firmware 15.x (it also should on 16.x), but some might glitch, and they likely won't be updated since NSX is sadly
-not active in the scene anymore.
 
-|                                        ![Mod AnimNX theme](nsx.jpg "Mod AnimNX theme")                                       |                                                                           ![Unison R theme](unisonR.jpg "Unison R theme")                                                                          |
+Puedes echar un vistazo a [mi perfil en Themezer](https://themezer.net/creators/382997176307154945) para ver ejemplos. Si quieres presenciar el tema en su máximo potencial, es posible que quieras ver el trabajo de [NSX](https://www.youtube.com/channel/UCtvgkpsXAGp0P3dJr6buxRg). La mayoría de sus temas aún funcionan en el firmware 15.x (también deberían en 16.x), pero algunos podrían tener problemas y es probable que no se actualicen ya que NSX lamentablemente ya no está activo en la escena.
+
+|                                        ![Mod AnimNX theme](nsx.jpg "Tema Mod AnimNX")                                       |                                                                           ![Tema Unison R](unisonR.jpg "Tema Unison R")                                                                          |
 |:----------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                                                    **Mod AnimNX** by NSX                                                   |                                                                     **[Unison R](https://themezer.net/packs/Unison-R-5fc)** by me                                                                    |
-| The cursor changes its shape in a looping animation, growing animation on game & applet icons on hover, among other features | Unlocking the console into the home screen triggers a zoom out+fade in animation, drop down animation for game titles, color changing buttons on hover, among other features |
+|                                                    **Mod AnimNX** por NSX                                                   |                                                                     **[Unison R](https://themezer.net/packs/Unison-R-5fc)** por mí                                                                    |
+| El cursor cambia de forma en una animación en bucle, animación de crecimiento en iconos de juegos y applets al pasar el ratón, entre otras características | Desbloquear la consola en la pantalla de inicio desencadena una animación de zoom out + fade in, animación de caída para los títulos de juegos, botones que cambian de color al pasar el ratón, entre otras características |
 
-## Requirements
+## Requisitos
 
-- As I mentioned, a minimum knowledge on layouts is mandatory. Be sure to **carefully** read the documentation found
-  on [LayoutDocs](https://layoutdocs.themezer.net/) before going any further. While I'll be doing a quick refresher
-  course, it would be too long to extra elaborate those subjects here.
+- Como mencioné, es obligatorio tener un conocimiento mínimo sobre los diseños. Asegúrate de leer **cuidadosamente** la documentación que se encuentra en [LayoutDocs](https://layoutdocs.themezer.net/) antes de continuar. Aunque haré un repaso rápido, sería demasiado largo elaborar más sobre esos temas aquí.
 
-- Windows 10 or 11
+- Windows 10 o 11
 
-- [Switch Theme Injector + NXTheme Installer](https://github.com/exelix11/SwitchThemeInjector/releases) to compile and
-  install your theme
+- [Switch Theme Injector + NXTheme Installer](https://github.com/exelix11/SwitchThemeInjector/releases) para compilar e instalar tu tema
 
-- [Switch Layout Editor release 15](https://github.com/FuryBaguette/SwitchLayoutEditor) to make animations and check the console's
-  files
+- [Switch Layout Editor release 15](https://github.com/FuryBaguette/SwitchLayoutEditor) para hacer animaciones y verificar los archivos de la consola
 
-- A text editor. [Visual Studio Code](https://code.visualstudio.com/download) highly recommended.
+- Un editor de texto. Se recomienda altamente [Visual Studio Code](https://code.visualstudio.com/download).
 
-Make sure you download the latest version for each aforementioned software.
+Asegúrate de descargar la última versión de cada software mencionado anteriormente.
 
-## Guide structure
+## Estructura de la guía
 
-Here is the general structure of this guide:
+Aquí está la estructura general de esta guía:
 
-- **Introduction part:** introducing animations and quick refresher course on Nintendo Switch files
+- **Parte de introducción:** presentación de las animaciones y un breve repaso sobre los archivos de Nintendo Switch
 
-- **Main tutorial:** animation creation process
+- **Tutorial principal:** proceso de creación de animaciones
 
-- **Extras:**
-    - **Animation templates:** speeding up the process, making color based animations
-    - **More on animations:** additional notes, looping animations, animated backgrounds
-    - **Tables:** to experiment further and expand animation possibilities
+- **Extras:** 
+    - **Plantillas de animación:** agilizar el proceso, hacer animaciones basadas en color
+    - **Más sobre animaciones:** notas adicionales, animaciones en bucle, fondos animados
+    - **Tablas:** para experimentar más y ampliar las posibilidades de animación
 
 
-# [Continue to Animations: refresher course](refresher.md) :octicons-arrow-right-16:
+# [Continuar con Animaciones: repaso del curso](refresher.md) :octicons-arrow-right-16:
 
 ---
 
-## Special thanks
+## Agradecimientos especiales
 
-- exelix and Migush for all the tips
-- Zhi for the animated background testing part
-- All the contributors from the Nintendo Switch modding scene
+- exelix y Migush por todos los consejos
+- Zhi por la parte de pruebas de fondos animados
+- Todos los contribuyentes de la escena de modificación de Nintendo Switch
 
-## Additional guides
+## Guías adicionales
 
-Check out these guides for more info on how to create animations:
+Echa un vistazo a estas guías para obtener más información sobre cómo crear animaciones:
 
-- [This tool guide](https://github.com/KillzXGaming/Switch-Toolbox/wiki/BFLYT-Editing#animations) shows how you can create
-animations.  
-- [This guide](https://www.reddit.com/r/NXThemes/comments/biu5hc/making_your_own_custom_animations/) shows how you have to
-implement the groups so that the animations work with the Switch Theme Injector
--   [Making your own custom animations](https://www.reddit.com/r/NXThemes/comments/biu5hc/making_your_own_custom_animations/)
--   [Importing Animations to your own Layout from another theme](https://www.reddit.com/r/NXThemes/comments/biti3d/importing_animations_to_your_own_layout_from/)
--   [Importing Animations using the SwitchLayoutEditor](https://www.reddit.com/r/NXThemes/comments/bkb5ix/importing_animations_using_the_layout_editor/)
-- [Zhi's Patterns theming guide](https://github.com/zzzribas/Patterns/wiki): a specific approach on animated backgrounds
+- [Esta guía de herramientas](https://github.com/KillzXGaming/Switch-Toolbox/wiki/BFLYT-Editing#animations) muestra cómo puedes crear animaciones.
+- [Esta guía](https://www.reddit.com/r/NXThemes/comments/biu5hc/making_your_own_custom_animations/) muestra cómo tienes que implementar los grupos para que las animaciones funcionen con el Switch Theme Injector
+-   [Hacer tus propias animaciones personalizadas](https://www.reddit.com/r/NXThemes/comments/biu5hc/making_your_own_custom_animations/)
+-   [Importar animaciones a tu propio diseño desde otro tema](https://www.reddit.com/r/NXThemes/comments/biti3d/importing_animations_to_your_own_layout_from/)
+-   [Importar animaciones usando el SwitchLayoutEditor](https://www.reddit.com/r/NXThemes/comments/bkb5ix/importing_animations_using_the_layout_editor/)
+- [Guía de temas de Zhi's Patterns](https://github.com/zzzribas/Patterns/wiki): un enfoque específico sobre fondos animados
