@@ -1,5 +1,5 @@
-# Other
+# Otros
 
-Here are some uncategorised extras.
+Aquí tienes algunos extras sin categorizar.
 
--   [A website that diffs sysupdates automatically](https://yls8.mtheall.com/ninupdates/titlelist.php?sys=hac)
+- [Un sitio web que hace diffing del sistema automáticamente](https://yls8.mtheall.com/ninupdates/titlelist.php?sys=hac)
