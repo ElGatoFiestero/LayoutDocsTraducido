@@ -1,25 +1,26 @@
-# LayoutDocs
+    # LayoutDocs
+    
+    <a href="https://ko-fi.com/Q5Q47KAM3"><img height="20" src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi" /></a>
 
-<a href="https://ko-fi.com/Q5Q47KAM3"><img height="20" src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi" /></a>
 
-This repository holds the documentation for custom Nintendo Switch layouts.
+Este repositorio contiene la documentación para los diseños personalizados de Nintendo Switch.
 
-## Building And Contributing
+## Construcción y Contribución
 
-1. Install Python 3
-2. Fork the repository
-3. Install the requirements:
+1. Instala Python 3
+2. Haz un fork del repositorio
+3. Instala los requisitos:
 
     ```sh
     python3 -m pip install mkdocs-material mkdocs-material-extensions
     ```
 
-4. To test:
+4. Para probar:
     ```sh
     mkdocs serve
     ```
-    To build:
+    Para construir:
     ```sh
     mkdocs build
     ```
-5. Push your changes to your GitHub fork and create a pull request. Your changes will be reviewed before they are merged.
+5. Haz push a tus cambios en tu fork de GitHub y crea una solicitud de extracción. Tus cambios serán revisados antes de ser fusionados.
