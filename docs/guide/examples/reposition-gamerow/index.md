@@ -1,10 +1,10 @@
-# Repositioning and Scaling the Gamerow
+# Reposicionando y Escalando la Fila de Juegos
 
-![Preview](preview.jpg)  
-_[Flow Layout](https://themezer.net/layouts/homemenu/Flow-Layout-5) by Migush_
+![Vista previa](preview.jpg)  
+_[Diseño de Flujo](https://themezer.net/layouts/homemenu/Flow-Layout-5) por Migush_
 
 ---
 
 _TODO_
 
--   Moving the first icon before x=127 (right?) may cause the cursor to get stuck.
+- Mover el primer icono antes de x=127 (¿derecha?) puede hacer que el cursor quede atascado.
