@@ -11,7 +11,7 @@ Option.szs tiene que ser parcheado manualmente ya que no es compatible con NXThe
 Sin el parche aplicado este es el SZS sin editar
 ![unpatched](<00opt.jpg>)
 
-similar al ejemplo en la página de [difusión](index.md) este difpatch tiene configuraciones que cambiarán:
+similar al ejemplo en la página de [diffpatch](index.md) este diffpatch tiene configuraciones que cambiarán:
 
  * _`option.szs/blyt/Line_Root.bflyt` - Eliminado_
  * _`option.szs/blyt/OptMain.bflyt` - Tema de color de fondo coincidente y tamaño de icono modificado_
