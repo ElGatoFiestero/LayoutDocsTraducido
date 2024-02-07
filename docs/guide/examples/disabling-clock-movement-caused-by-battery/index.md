@@ -42,6 +42,6 @@ Estos son los valores de relleno predeterminados entre el indicador de red y el 
 }
 ```
 
-This example code modifies the default values and sets them all to `64`, meaning the hud won't shift anymore depending on battery percentage. These values are stored in an animation: `Hud_BatteryNum`.
+Este código de ejemplo modifica los valores predeterminados y los establece todos en `64`, lo que significa que el HUD ya no se desplazará según el porcentaje de batería. Estos valores están almacenados en una animación: `Hud_BatteryNum`.
 
-The `AddGroups` part makes sure the `Hud.bflyt` actually uses the new animation.
+La parte `AddGroups` se asegura de que `Hud.bflyt` realmente utilice la nueva animación.
